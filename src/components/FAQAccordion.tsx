@@ -24,12 +24,13 @@ const accordionData: Props["data"] = [
     description: (
       <>
         <p>
-          El campamento se realizará entre el martes 22 de julio y el viernes 1 de
-          agosto de 2025, en la Universidad Técnica Federico Santa María, en Valparaíso.
+          El campamento se realizará durante dos semanas en Julio de 2026, en la ciudad de Valdivia. 
         </p>
+        {/*
         <p>
           Puedes encontrar más información en el <a href="/cronograma">cronograma</a>.
         </p>
+        */}
       </>
     ),
   },
@@ -86,48 +87,14 @@ const accordionData: Props["data"] = [
     ),
   },
   {
-    title: "¿Qué criterios se consideran para otorgar las becas?",
-    description: (
-      <p>
-        Al igual que años pasados, la cantidad de becas es limitada. Tras el cierre
-        de las postulaciones, se evaluará cada caso y se asignarán las becas 
-        disponibles considerando factores como universidad y región de procedencia,
-        y dando prioridad a equipos compuestos solo por mujeres. Se buscará maximizar 
-        la diversidad geográfica e institucional entre los beneficiados.
-      </p>
-    ),
-  },
-  {
-    title: "¿Cómo se hará la entrega de las becas?",
-    description: (
-      <>
-        <p>
-          Si se te asigna una beca, recibirás el 50% antes del inicio del campamento
-          y el 50% restante a mitad del evento, una vez confirmada tu asistencia. 
-          El monto se entregará a través de transferencia bancaria o en efectivo en
-          caso de ser extranjero.
-        </p>
-        <p>
-          Para formalizar la entrega, antes de recibir la beca deberás firmar un 
-          compromiso de uso responsable y asistencia completa a las actividades. 
-        </p>
-      </>
-    )
-  },
-  {
     title:
-      "¿Qué ocurre si no puedo asistir al campamento todos los días? ¿Pierdo la beca si falto un día?",
+      "¿Qué ocurre si no puedo asistir al campamento todos los días?",
     description: (
       <>
         <p>
           No hay problemas si no puedes asistir a todas las actividades del
           campamento, pero el cronograma está diseñado para aprender lo máximo
           posible al ir todos los días.
-        </p>
-        <p>
-          Se revocará el derecho a beca al tener más de 2 inasistencias contando
-          hasta el segundo miércoles. Casos excepcionales pueden ser conversados
-          con los organizadores.
         </p>
       </>
     ),
@@ -136,11 +103,9 @@ const accordionData: Props["data"] = [
     title: "No tengo una o dos personas para armar un equipo, ¿qué hago?",
     description: (
       <p>
-        Puedes inscribirte de igual manera si no tienes un equipo completo. En
-        el campamento haremos nuestro mejor esfuerzo para que todos estén en un
-        equipo. Sin embargo, en el formulario de inscripción indicamos que
-        daremos prioridad a equipos completos sólo en caso de que estemos
-        limitados por el espacio.
+        Puedes participar de forma individual, en pareja o en equipo de tres
+        personas. Si no tienes equipo completo, en el campamento haremos nuestro
+        mejor esfuerzo para que todos estén en uno.
       </p>
     ),
   },
@@ -164,6 +129,17 @@ const accordionData: Props["data"] = [
     ),
   },
   {
+    title: "¿Y si no puedo costear el viaje o el hospedaje?",
+    description: (
+      <p>
+        La Sociedad Chilena de Programación Competitiva ofrece becas destinadas
+        a ayudar a costear transporte, hospedaje y alimentación para promover la
+        participación de estudiantes de diversas instituciones y quienes tengan
+        dificultades económicas para asistir al campamento. Más detalles <a href="/acerca">aquí</a>.
+      </p>
+    ),
+  },
+  {
     title:
       "¿Qué hay de la alimentación, transporte, y estadía durante el campamento?",
     description: (
@@ -173,8 +149,8 @@ const accordionData: Props["data"] = [
           alimentación, transporte y hospedaje durante los días del campamento.
         </p>
         <p>
-          El casino de la universidad estará disponible para comprar almuerzo a precios
-          accesibles.
+          {/* El casino de la universidad estará disponible para comprar almuerzo a precios
+          accesibles. */}
         </p>
       </>
     ),

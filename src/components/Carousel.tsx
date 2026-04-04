@@ -8,15 +8,17 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
-import image2024 from "../assets/años-anteriores/2024-concepcion.jpg";
-import image2023 from "../assets/años-anteriores/2023-valparaiso.jpg";
-import image2019 from "../assets/años-anteriores/2019-valdivia.jpg";
-import image2018 from "../assets/años-anteriores/2018-santiago.jpg";
-import image2017 from "../assets/años-anteriores/2017-concepcion.jpg";
-import image2016 from "../assets/años-anteriores/2016-la-serena.jpg";
-import image2015 from "../assets/años-anteriores/2015-valparaiso.jpg";
+import image2025 from "../assets/anos-anteriores/2025-valparaiso.jpg";
+import image2024 from "../assets/anos-anteriores/2024-concepcion.jpg";
+import image2023 from "../assets/anos-anteriores/2023-valparaiso.jpg";
+import image2019 from "../assets/anos-anteriores/2019-valdivia.jpg";
+import image2018 from "../assets/anos-anteriores/2018-santiago.jpg";
+import image2017 from "../assets/anos-anteriores/2017-concepcion.jpg";
+import image2016 from "../assets/anos-anteriores/2016-la-serena.jpg";
+import image2015 from "../assets/anos-anteriores/2015-valparaiso.jpg";
 
 const descriptions: Record<string, string> = {
+  "2025": "2025, Valparaíso",
   "2024": "2024, Concepción",
   "2023": "2023, Valparaíso",
   "2019": "2019, Valdivia",
@@ -27,6 +29,7 @@ const descriptions: Record<string, string> = {
 };
 
 const positions: Record<string, string> = {
+  "2025": "object-[0%_50%]",
   "2024": "object-[0%_80%]",
   "2023": "object-[0%_40%]",
   "2019": "object-[0%_50%]",
@@ -38,6 +41,12 @@ const positions: Record<string, string> = {
 
 // Array of image data, sorted by year descending
 const images = [
+  {
+    year: "2025",
+    src: image2025.src,
+    description: descriptions["2025"] || "",
+    position: positions["2025"],
+  },
   {
     year: "2024",
     src: image2024.src,

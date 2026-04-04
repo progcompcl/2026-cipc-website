@@ -3,15 +3,14 @@ import Page from "../layouts/Page.astro";
 import Carousel from "../components/Carousel.tsx";
 import FAQAccordion from "../components/FAQAccordion.tsx";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
 ---
 
 <Page title="Acerca">
   <Carousel slot="before-article" client:load />
   <h1>¿Qué es el CIPC?</h1>
   <p>
-    El <strong>Campamento Invernal de Programación Competitiva</strong> es un programa
-    intensivo de dos semanas diseñado para estudiantes universitarios interesados
+    El <strong>Campamento Invernal de Programación Competitiva</strong> es una escuela de invierno
+    intensiva de dos semanas diseñada para estudiantes universitarios interesados
     en aprender y aplicar algoritmos y estructuras de datos en el contexto de la
     programación competitiva, con un enfoque principal en competencias estilo
     <a
@@ -85,12 +84,17 @@ import { Separator } from "@/components/ui/separator";
     hospedaje y alimentación. 
   </p>
   <p>
-    El casino de la universidad estará disponible para comprar almuerzo a precios
-    accesibles, y además, durante las clases se ofrecerá un <strong><i>coffee break</i> gratuito</strong>
+    Durante las clases se ofrecerá un <strong><i>coffee break</i> gratuito</strong>
     para todos los asistentes.
   </p>
 
-  <h2>Becas</h2>
+  {/* <p>
+    El casino de la universidad estará disponible para comprar almuerzo a precios
+    accesibles, y además, durante las clases se ofrecerá un <strong><i>coffee break</i> gratuito</strong>
+    para todos los asistentes.
+  </p> */}
+
+  {/* <h2>Becas</h2>
   <p>
     Para quienes necesiten apoyo económico, el campamento ofrece becas destinadas 
     a <strong>ayudar a costear transporte, hospedaje y alimentación</strong>. Para postular, debes
@@ -98,8 +102,7 @@ import { Separator } from "@/components/ui/separator";
     tus gastos y explicando brevemente por qué deberías recibir la beca. Ten en 
     cuenta que la postulación es individual y no por equipo. Se buscará maximizar
     la diversidad geográfica e institucional entre los beneficiados.
-  </p>
-  
+  </p> */}
 
   <h2>Preguntas frecuentes</h2>
   <FAQAccordion client:load />
@@ -120,3 +123,9 @@ import { Separator } from "@/components/ui/separator";
     href="https://progcomp.cl">Sociedad Chilena de Programación Competitiva</a
   >.
 </Page>
+
+<style>
+  :global(article p) {
+    text-align: justify;
+  }
+</style>
