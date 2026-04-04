@@ -1,0 +1,159 @@
+---
+import Page from "../layouts/Page.astro";
+import ImpactoCarousel from "../components/ImpactoCarousel";
+import { Image } from "astro:assets";
+
+import logoGoogle from "../assets/logos/google.svg";
+import logoMicrosoft from "../assets/logos/microsoft.svg";
+import logoFacebook from "../assets/logos/facebook.png";
+import logoTCS from "../assets/logos/tcs.png";
+import logoNTTData from "../assets/logos/nttdata.svg";
+import logoSynopsys from "../assets/logos/synopsys.svg";
+import logoFintual from "../assets/logos/fintual.png";
+import logoCero from "../assets/logos/cero.svg";
+import logoCENIA from "../assets/logos/cenia.png";
+import logoNICChile from "../assets/logos/nic-chile.png";
+
+const logoSponsors = [
+  { name: "Google", src: logoGoogle },
+  { name: "Microsoft", src: logoMicrosoft },
+  { name: "Facebook", src: logoFacebook },
+  { name: "TCS", src: logoTCS },
+  { name: "NTT Data", src: logoNTTData },
+  { name: "Synopsys", src: logoSynopsys },
+  { name: "Fintual", src: logoFintual },
+  { name: "Cero", src: logoCero },
+  { name: "CENIA", src: logoCENIA },
+  { name: "NIC Chile", src: logoNICChile },
+];
+---
+
+<Page title="Impacto">
+  <ImpactoCarousel slot="before-article" client:load />
+
+  <h1>Impacto del CIPC</h1>
+
+  <p>
+    Desde su primera edición en 2015, el <strong>Campamento Invernal de
+    Programación Competitiva</strong> ha formado a más de 700 estudiantes universitarios
+    de todo Chile en algoritmos avanzados y resolución de problemas. En 8 ediciones,
+    el campamento ha reunido participantes de más de 12 instituciones distintas,
+    desde Arica hasta Valdivia, consolidándose como la principal instancia de
+    formación para programación competitiva en el país.
+  </p>
+
+  <div class="not-prose grid grid-cols-2 md:grid-cols-4 gap-6 my-8">
+    {
+      [
+        { number: "8", label: "ediciones", sublabel: "2015-2025" },
+        { number: "+700", label: "estudiantes formados", sublabel: "en toda su historia" },
+        { number: "+200", label: "inscritos", sublabel: "en la edición 2025" },
+        { number: "+12", label: "universidades", sublabel: "en la edición 2025" },
+      ].map((stat) => (
+        <div class="border-t-2 border-logo-orange pt-3">
+          <div class="font-title text-4xl font-black text-logo-orange leading-none">
+            {stat.number}
+          </div>
+          <div class="text-sm font-semibold text-gray-800 dark:text-gray-200 mt-1 leading-tight">
+            {stat.label}
+          </div>
+          <div class="text-xs text-gray-400 mt-0.5">{stat.sublabel}</div>
+        </div>
+      ))
+    }
+  </div>
+
+  <p>
+    En la edición 2025 se registraron <strong>más de 200 inscritos</strong> y
+    asistieron <strong>más de 120 estudiantes</strong> presencialmente, representando
+    instituciones como la Universidad Técnica Federico Santa María, la Pontificia
+    Universidad Católica de Chile, la Universidad de Chile, la Pontificia
+    Universidad Católica de Valparaíso, la Universidad de Concepción, la Universidad
+    Diego Portales, entre otras.
+  </p>
+
+  <h2>Una puerta al talento técnico del país</h2>
+
+  <p>
+    El CIPC reúne durante dos semanas a estudiantes de todo el país en clases avanzadas de algoritmos,
+    sesiones prácticas y competencias simuladas individuales y en equipos de
+    tres personas. Su objetivo es preparar a los mejores talentos del país para
+    instancias internacionales de alto nivel como la <strong>ICPC</strong>,
+    <strong>TCS CodeVita</strong> y <strong>Codificadas</strong>.
+  </p>
+
+  <h2>Logros internacionales</h2>
+
+  <p>
+    Los estudiantes que pasan por el CIPC representan a Chile en las
+    competencias de programación más exigentes del mundo. Algunos logros
+    recientes de la comunidad:
+  </p>
+
+  <ul>
+    <li>
+      <strong>2° y 3° lugar mundial en TCS CodeVita 2025.</strong> Chile colocó
+      4 finalistas entre 537.000 competidores de 96 países en el torneo con
+      récord Guinness como la competencia de programación más grande del mundo.
+      (<a href="https://www.24horas.cl/conciencia-24-7/tecnologia/tcs-codevita-chile-brilla-final-mundial-programacion">24horas.cl</a>)
+    </li>
+    <li>
+      <strong>Medalla de oro en la final latinoamericana del ICPC.</strong> Un
+      equipo de la Universidad de Chile obtuvo medalla de oro y clasificó al
+      mundial en Dubái, quedando entre los 40 mejores equipos de la región en
+      la olimpiada universitaria de programación más importante a nivel global.
+      (<a href="https://www.instagram.com/p/DWhmfwxESCF/">Instagram T13</a>)
+    </li>
+    <li>
+      <strong>Top 10 de programadoras de Latinoamérica.</strong> Javiera León,
+      estudiante de Ingeniería en la Pontificia Universidad Católica de Chile,
+      clasificó a la final de Codificadas entre más de 4.700 mujeres de 16
+      países.
+      (<a href="https://www.t13.cl/noticia/tendencias/chilena-se-instala-entre-las-10-mejores-programadoras-latinoamerica-ahora-va-po-25-11-2025">T13.cl</a>)
+    </li>
+  </ul>
+
+  <h2>Empresas que han confiado en el CIPC</h2>
+
+  <p>
+    En ediciones anteriores, el CIPC ha contado con el apoyo de organizaciones
+    líderes del sector tecnológico y académico, quienes han podido tener
+    presencia directa en el evento, fortalecer su imagen de marca dentro de la
+    comunidad y conectar con participantes que luego se han incorporado a sus
+    equipos.
+  </p>
+
+  <table class="not-prose w-full my-6 border-collapse">
+    {
+      Array.from({ length: Math.ceil(logoSponsors.length / 3) }, (_, i) =>
+        logoSponsors.slice(i * 3, i * 3 + 3)
+      ).map((row) => (
+        <tr>
+          {row.map((s) => (
+            <td class="w-1/3 py-5 px-6 text-center align-middle">
+              <Image
+                src={s.src}
+                alt={s.name}
+                title={s.name}
+                class="h-12 w-auto max-w-full object-contain mx-auto"
+                inferSize
+              />
+            </td>
+          ))}
+          {row.length < 3 && Array.from({ length: 3 - row.length }, () => <td class="w-1/3" />)}
+        </tr>
+      ))
+    }
+  </table>
+
+  <p>
+    Para participar en el CIPC 2026 como empresa colaboradora, escríbenos a
+    <strong>campamento@progcomp.cl</strong>.
+  </p>
+</Page>
+
+<style>
+  :global(article p) {
+    text-align: justify;
+  }
+</style>
