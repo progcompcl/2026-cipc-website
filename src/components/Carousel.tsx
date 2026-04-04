@@ -117,8 +117,8 @@ const CarouselComponent: React.FC = () => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="absolute top-1/2 left-4 -translate-y-1/2 size-12 rounded-full bg-white/50 flex justify-center items-center" />
-      <CarouselNext className="absolute top-1/2 right-4 -translate-y-1/2 size-12 rounded-full bg-white/50 flex justify-center items-center" />
+      <CarouselPrevious className="absolute top-1/2 left-4 -translate-y-1/2 size-12 rounded-full bg-white/50 flex justify-center items-center" onClickCapture={() => autoplayPlugin.current.stop()} />
+      <CarouselNext className="absolute top-1/2 right-4 -translate-y-1/2 size-12 rounded-full bg-white/50 flex justify-center items-center" onClickCapture={() => autoplayPlugin.current.stop()} />
     </Carousel>
   );
 };
