@@ -1,6 +1,6 @@
 @import "@fontsource/inter";
 @import "@fontsource/jetbrains-mono";
-@import "@fontsource/archivo-black";
+@import "@fontsource-variable/archivo";
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -10,7 +10,7 @@
 @theme {
   --font-sans: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
   --font-mono: "JetBrains Mono", "Courier New", Courier, monospace;
-  --font-title: "Archivo Black", "Arial Black", sans-serif;
+  --font-title: "Archivo Variable", "Arial Black", sans-serif;
 
   --color-logo-negative: #f36148;
   --color-logo-orange: #ffa600; /* 500 Default */

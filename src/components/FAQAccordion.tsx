@@ -129,17 +129,6 @@ const accordionData: Props["data"] = [
     ),
   },
   {
-    title: "¿Y si no puedo costear el viaje o el hospedaje?",
-    description: (
-      <p>
-        La Sociedad Chilena de Programación Competitiva ofrece becas destinadas
-        a ayudar a costear transporte, hospedaje y alimentación para promover la
-        participación de estudiantes de diversas instituciones y quienes tengan
-        dificultades económicas para asistir al campamento. Más detalles <a href="/acerca">aquí</a>.
-      </p>
-    ),
-  },
-  {
     title:
       "¿Qué hay de la alimentación, transporte, y estadía durante el campamento?",
     description: (
@@ -153,6 +142,17 @@ const accordionData: Props["data"] = [
           accesibles. */}
         </p>
       </>
+    ),
+  },
+    {
+    title: "¿Y si no puedo costear el viaje o el hospedaje?",
+    description: (
+      <p>
+        La Sociedad Chilena de Programación Competitiva ofrece becas destinadas
+        a ayudar a costear transporte, hospedaje y alimentación para promover la
+        participación de estudiantes de diversas instituciones y quienes tengan
+        dificultades económicas para asistir al campamento. Más detalles <a href="/acerca">aquí</a>.
+      </p>
     ),
   },
   {

@@ -5,6 +5,7 @@ import Base from "../layouts/Base.astro";
 import { Link } from "@/components/ui/link";
 import { Info } from "lucide-react";
 import { Image } from "astro:assets";
+import logoHero from "../assets/logo-hero.svg";
 ---
 
 <Base title="Inicio" bodyClasses={["dark"]}>
@@ -16,29 +17,31 @@ import { Image } from "astro:assets";
       alt="Valdivia y su río"
     />
     <div id="hero" class="flex flex-col items-center">
-      <div id="hero-text">
-        <h1
-          id="hero-title"
-          class="text-2xl font-title text-center text-[clamp(2.5rem,6vw,5rem)] font-black tracking-tighter leading-[0.9] text-shadow-lg/50 text-white"
-        >
-          CAMPAMENTO INVERNAL <br /> DE <span class="text-logo-orange"
-            >PROGRAMACIÓN <br /> COMPETITIVA</span
-          >
-        </h1>
+      <div id="hero-text" class="flex flex-col items-center">
+        <Image
+          src={logoHero}
+          alt="CIPC"
+          class="w-[clamp(18rem,30vw,40rem)]"
+        />
         <h2
+          class="mt-4 text-center font-title text-[clamp(1rem,2.5vw,1.75rem)] font-extrabold text-white [text-shadow:0_2px_25px_rgba(0,0,0,1),0_0_12px_rgba(0,0,0,1)]"
+        >
+          Campamento Invernal de <span class="text-logo-orange">Programación Competitiva</span>
+        </h2>
+        <h3
           id="hero-subtitle"
           class="mt-4 text-md lg:text-lg text-center text-white text-shadow-black text-shadow-lg"
         >
           Julio, 2026 <br /> Valdivia
-        </h2>
-        <h3
+        </h3>
+        <h4
           class="mt-4 text-sm lg:text-sm text-center text-white text-shadow-black text-shadow-lg"
         >
           Detalles e inscripciones próximamente. ¡Mantente atento!
-        </h3>
+        </h4>
       </div>
       <div class="flex">
-        <Link variant="secondary" size="lg" className="m-2" href="/acerca"
+        <Link variant="secondary" size="lg" className="m-2" href="/acerca/"
           ><Info /> Más información</Link
         >
       </div>
