@@ -1,0 +1,121 @@
+---
+import Page from "../layouts/Page.astro";
+import { Image } from "astro:assets";
+
+import ignacioMunoz from "../assets/organizadores/ignacio-munoz.jpg";
+import benjaminRubio from "../assets/organizadores/benjamin-rubio.jpg";
+import benjaminLetelier from "../assets/organizadores/benjamin-letelier.jpg";
+import gabrielCarmona from "../assets/organizadores/gabriel-carmona.jpg";
+import marceloLemus from "../assets/organizadores/marcelo-lemus.jpg";
+import blazKorecic from "../assets/organizadores/blaz-korecic.jpg";
+
+const organizers = [
+  {
+    name: "Benjamín Letelier",
+    photo: benjaminLetelier,
+    info: [
+      { text: "Coach de Programación Competitiva" },
+      { role: "Estudiante de Doctorado", institution: "Universidad de Concepción" },
+      { role: "Magíster en Ciencias de la Computación", institution: "Universidad Austral de Chile" },
+    ],
+    email: "benjamin.letelier@progcomp.cl",
+  },
+  {
+    name: "Ignacio Muñoz",
+    photo: ignacioMunoz,
+    info: [
+      { text: "3.er lugar mundial TCS CodeVita 2025" },
+      { role: "Ingeniero de Software", institution: "Cero.ai" },
+      { role: "Ingeniero Civil", institution: "Pontificia Universidad Católica de Chile" },
+    ],
+    email: "ignacio.munoz@progcomp.cl",
+  },
+  {
+    name: "Benjamín Rubio",
+    photo: benjaminRubio,
+    info: [
+      { text: "Campeón nacional ICPC Chile 2020" },
+      { role: "Incoming Quant Research Intern", institution: "Jane Street" },
+      { role: "Estudiante de Doctorado", institution: "Columbia University" },
+    ],
+    email: "benjamin.rubio@progcomp.cl",
+  },
+  {
+    name: "Gabriel Carmona",
+    photo: gabrielCarmona,
+    info: [
+      { text: "Coach de Programación Competitiva" },
+      { role: "Estudiante de Doctorado en Ciencias de la Computación", institution: "Università di Pisa" },
+      { role: "Ingeniero Civil en Informática", institution: "Universidad Técnica Federico Santa María" },
+    ],
+    email: "gabriel.carmona@progcomp.cl",
+  },
+  {
+    name: "Blaz Korecic",
+    photo: blazKorecic,
+    info: [
+      { text: "Campeón nacional ICPC Chile 2021" },
+      { role: "Estudiante de Magíster en Ciencias de la Computación", institution: "Universidad de Chile" },
+    ],
+    email: "blaz.korecic@progcomp.cl",
+  },
+  {
+    name: "Marcelo Lemus",
+    photo: marceloLemus,
+    info: [
+      { text: "Subcampeón nacional ICPC Chile 2022" },
+      { role: "Estudiante de Ingeniería Civil en Computación", institution: "Pontificia Universidad Católica de Chile" },
+    ],
+    email: "marcelo.lemus@progcomp.cl",
+  },
+];
+---
+
+<Page title="Organizadores">
+  <h1>Organizadores</h1>
+
+  <p class="text-justify">
+    El CIPC es organizado por la <a href="https://progcomp.cl">Sociedad Chilena
+    de Programación Competitiva</a>.
+  </p>
+
+  <div class="not-prose grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-16 my-12">
+    {
+      organizers.map((org) => (
+        <div class="flex flex-col items-center text-center">
+          <Image
+            src={org.photo}
+            alt={`Foto de ${org.name}`}
+            width={192}
+            height={192}
+            class="rounded-full w-40 h-40 object-cover mb-5"
+          />
+          <p class="text-base font-bold text-xl">
+            {org.name}
+          </p>
+          <p class="text-base text-sm text-gray-400 mt-1 mb-4">
+            {org.email}
+          </p>
+          <div class="flex flex-col gap-3 text-left">
+            {org.info.map((item) =>
+              "text" in item ? (
+                <p class="text-base text-md">
+                  {item.text}
+                </p>
+              ) : (
+                <div>
+                  <p class="text-base text-md">
+                    {item.role}
+                  </p>
+                  <p class="text-base text-md text-gray-400 mt-0.5">
+                    {item.institution}
+                  </p>
+                </div>
+              )
+            )}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</Page>
