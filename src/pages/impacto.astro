@@ -3,6 +3,11 @@ import Page from "../layouts/Page.astro";
 import ImpactoCarousel from "../components/ImpactoCarousel";
 import { Image } from "astro:assets";
 
+import foto1 from "../assets/fotos-impacto/foto1.jpg";
+import foto2 from "../assets/fotos-impacto/foto2.jpg";
+import foto3 from "../assets/fotos-impacto/foto3.jpg";
+import foto4 from "../assets/fotos-impacto/foto4.jpg";
+
 import logoGoogle from "../assets/logos/google.svg";
 import logoMicrosoft from "../assets/logos/microsoft.svg";
 import logoFacebook from "../assets/logos/facebook.png";
@@ -45,10 +50,10 @@ const logoSponsors = [
   <div class="not-prose grid grid-cols-2 md:grid-cols-4 gap-6 my-8">
     {
       [
-        { number: "8", label: "ediciones", sublabel: "2015-2025" },
         { number: "+700", label: "estudiantes formados", sublabel: "en toda su historia" },
         { number: "+200", label: "inscritos", sublabel: "en la edición 2025" },
         { number: "+12", label: "universidades", sublabel: "en la edición 2025" },
+        { number: "8", label: "ediciones", sublabel: "2015-2025" },
       ].map((stat) => (
         <div class="border-t-2 border-logo-orange pt-3">
           <div class="font-title text-4xl font-black text-logo-orange leading-none">
@@ -72,14 +77,14 @@ const logoSponsors = [
     Diego Portales, entre otras.
   </p>
 
-  <h2>Una puerta al talento técnico del país</h2>
+  <h2>Una puerta al talento del país</h2>
 
   <p>
     El CIPC reúne durante dos semanas a estudiantes de todo el país en clases avanzadas de algoritmos,
     sesiones prácticas y competencias simuladas individuales y en equipos de
     tres personas. Su objetivo es preparar a los mejores talentos del país para
     instancias internacionales de alto nivel como la <strong>ICPC</strong>,
-    <strong>TCS CodeVita</strong> y <strong>Codificadas</strong>.
+    <strong>TCS CodeVita</strong> y la <strong>Maratón Femenina de Programación</strong>.
   </p>
 
   <h2>Logros internacionales</h2>
@@ -112,6 +117,16 @@ const logoSponsors = [
       (<a href="https://www.24horas.cl/conciencia-24-7/tecnologia/tcs-codevita-chile-brilla-final-mundial-programacion">24horas.cl</a>)
     </li>
   </ul>
+
+  <div class="not-prose grid grid-cols-2 gap-3 my-8 -mx-4 md:-mx-20">
+    {[foto1, foto4, foto2, foto3].map((foto, i) => (
+      <Image
+        src={foto}
+        alt={`Foto CIPC ${i + 1}`}
+        class="w-full h-40 md:h-50 object-cover"
+      />
+    ))}
+  </div>
 
   <h2>Empresas que han confiado en el CIPC</h2>
 

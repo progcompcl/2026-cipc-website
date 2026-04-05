@@ -9,15 +9,17 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 
 import foto1 from "../assets/fotos-campamento/p1110247.jpg";
-import foto2 from "../assets/fotos-campamento/p1110254.jpg";
+import foto2 from "../assets/fotos-campamento/IMG_20260404_222156_790.jpg";
 import foto3 from "../assets/fotos-campamento/p1110363.jpg";
-import foto4 from "../assets/fotos-campamento/p1110423.jpg";
+import foto4 from "../assets/fotos-campamento/p1110254.jpg";
+import foto5 from "../assets/fotos-campamento/p1110423.jpg";
 
 const fotos = [
-  { src: foto1.src, alt: "CIPC 2025 — sesión de clases" },
-  { src: foto2.src, alt: "CIPC 2025 — trabajo en equipo" },
-  { src: foto3.src, alt: "CIPC 2025 — sesión práctica" },
-  { src: foto4.src, alt: "CIPC 2025 — competencia" },
+  { src: foto1.src, alt: "CIPC 2025 - sesión de clases" },
+  { src: foto2.src, alt: "CIPC 2025 - charla de sponsor" },
+  { src: foto3.src, alt: "CIPC 2025 - trabajo en equipo" },
+  { src: foto4.src, alt: "CIPC 2025 - sesión práctica" },
+  { src: foto5.src, alt: "CIPC 2025 - competencia" },
 ];
 
 const ImpactoCarousel: React.FC = () => {
