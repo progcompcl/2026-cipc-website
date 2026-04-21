@@ -3,7 +3,7 @@ import Header from "../components/Header.astro";
 import background from "../assets/valdivia.jpg";
 import Base from "../layouts/Base.astro";
 import { Link } from "@/components/ui/link";
-import { Info } from "lucide-react";
+import { Info, Bell } from "lucide-react";
 import { Image } from "astro:assets";
 import logoHero from "../assets/logo-hero.svg";
 ---
@@ -42,7 +42,16 @@ import logoHero from "../assets/logo-hero.svg";
           Detalles e inscripciones próximamente. ¡Mantente atento!
         </h4>
       </div>
-      <div class="flex">
+      <div class="flex flex-col items-center">
+        <Link
+          variant="default"
+          size="lg"
+          className="m-2"
+          href="https://forms.gle/7Vh9HJTzbSxGTkyw9"
+          target="_blank"
+          rel="noopener noreferrer"
+        ><Bell /> Avísame cuando abran inscripciones</Link
+        >
         <Link variant="secondary" size="lg" className="m-2" href="/acerca/"
           ><Info /> Más información</Link
         >
