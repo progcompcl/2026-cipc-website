@@ -1,10 +1,52 @@
 ---
 import Page from "../layouts/Page.astro";
+import { Image } from "astro:assets";
+import logoJaneStreet from "../assets/logos/jane-street.png";
 ---
 
 <Page title="Patrocinadores">
-  <div class="not-prose flex flex-col items-center justify-center py-24 text-center">
-    <h1 class="text-3xl font-bold mb-4">Patrocinadores</h1>
-    <p class="text-xl text-muted-foreground">Próximamente</p>
+  <h1>Patrocinadores</h1>
+
+  <p>
+    El CIPC es posible gracias al apoyo de empresas que creen en el desarrollo
+    del talento en programación competitiva en Chile.
+  </p>
+
+  <div class="not-prose flex flex-col md:flex-row items-center gap-8 my-8">
+    <div class="flex-shrink-0 flex items-center justify-center w-full md:w-48">
+      <Image
+        src={logoJaneStreet}
+        alt="Jane Street"
+        class="h-16 w-auto object-contain"
+        inferSize
+      />
+    </div>
+    <div>
+      <h2 class="text-xl font-bold mb-2 mt-0">Jane Street</h2>
+      <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
+        Jane Street es una firma de trading cuantitativo global con presencia en
+        Nueva York, Londres y Hong Kong. Reconocida por su cultura de rigor
+        técnico y pensamiento algorítmico, es una de las empresas más influyentes
+        en el uso de programación funcional aplicada a los mercados financieros.
+        Jane Street apoya activamente la comunidad de programación competitiva a
+        nivel mundial, patrocinando competencias e iniciativas educativas para
+        estudiantes destacados.
+      </p>
+    </div>
   </div>
+
+  <div class="not-prose flex flex-col items-center justify-center py-24 text-center">
+    <p class="text-xl text-muted-foreground">Próximamente más patrocinadores</p>
+  </div>
+
+  <p>
+    ¿Tu empresa quiere ser parte del CIPC 2026? Escríbenos a
+    <strong>campamento@progcomp.cl</strong>.
+  </p>
 </Page>
+
+<style>
+  :global(article p) {
+    text-align: justify;
+  }
+</style>
