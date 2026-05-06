@@ -17,14 +17,14 @@ const accordionData: Props["data"] = [
     title:
       "¿Es un campamento de verdad? ¿Vamos a acampar y programar a la luz de una fogata? ",
     description:
-      "¡No! (aunque no sería mala idea). El campamento es una escuela de invierno entre clases y sesiones prácticas en equipos. Típicamente, cada jornada dura todo el día, con clases en la mañana y sesiones prácticas en las tardes.",
+      "¡No! (aunque no sería mala idea). El campamento es una escuela de invierno entre clases y sesiones prácticas en equipos. Típicamente, cada jornada dura todo el día, con clases en la mañana y sesiones prácticas en las tardes. Sábado y domingo son libres.",
   },
   {
     title: "¿Cuándo y dónde se realizará el campamento?",
     description: (
       <>
         <p>
-          El campamento se realizará durante dos semanas en Julio de 2026, en la ciudad de Valdivia. 
+          El campamento se llevará a cabo entre el 20 y el 31 de julio de 2026, en la ciudad de Valdivia, Chile. La primera semana se realizará en la Universidad San Sebastián, y la segunda semana en la Universidad Austral de Chile. Ambas universidades están ubicadas en el centro de Valdivia, a pocos minutos a pie entre sí.
         </p>
         {/*
         <p>
@@ -100,12 +100,13 @@ const accordionData: Props["data"] = [
     ),
   },
   {
-    title: "No tengo una o dos personas para armar un equipo, ¿qué hago?",
+    title: "No tengo con quién armar equipo, ¿qué hago?",
     description: (
       <p>
-        Puedes participar de forma individual, en pareja o en equipo de tres
-        personas. Si no tienes equipo completo, en el campamento haremos nuestro
-        mejor esfuerzo para que todos estén en uno.
+        Puedes participar solo, en pareja o en equipo de tres. Si quieres
+        compañeros, haremos lo posible para conectarte con otros participantes
+        en el campamento. También puedes participar de forma individual, ¡eres
+        bienvenido de todas formas!
       </p>
     ),
   },
@@ -138,8 +139,8 @@ const accordionData: Props["data"] = [
           alimentación, transporte y hospedaje durante los días del campamento.
         </p>
         <p>
-          {/* El casino de la universidad estará disponible para comprar almuerzo a precios
-          accesibles. */}
+          El casino de la universidad estará disponible para comprar almuerzo a precios
+          accesibles.
         </p>
       </>
     ),
@@ -150,8 +151,8 @@ const accordionData: Props["data"] = [
       <p>
         La Sociedad Chilena de Programación Competitiva ofrece becas destinadas
         a ayudar a costear transporte, hospedaje y alimentación para promover la
-        participación de estudiantes de diversas instituciones y quienes tengan
-        dificultades económicas para asistir al campamento. Más detalles <a href="/acerca">aquí</a>.
+        participación de estudiantes de diversas regiones e instituciones y quienes tengan
+        dificultades económicas para asistir al campamento. Para más detalles escribe a contacto@progcomp.cl.
       </p>
     ),
   },
