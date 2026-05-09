@@ -3,10 +3,49 @@ import Page from "../layouts/Page.astro";
 import Carousel from "../components/Carousel.tsx";
 import FAQAccordion from "../components/FAQAccordion.tsx";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { getImage } from "astro:assets";
+
+import image2025 from "../assets/anos-anteriores/2025-valparaiso.jpg";
+import image2024 from "../assets/anos-anteriores/2024-concepcion.jpg";
+import image2023 from "../assets/anos-anteriores/2023-valparaiso.jpg";
+import image2019 from "../assets/anos-anteriores/2019-valdivia.jpg";
+import image2018 from "../assets/anos-anteriores/2018-santiago.jpg";
+import image2017 from "../assets/anos-anteriores/2017-concepcion.jpg";
+import image2016 from "../assets/anos-anteriores/2016-la-serena.jpg";
+import image2015 from "../assets/anos-anteriores/2015-valparaiso.jpg";
+
+const rawImages = [
+  { year: "2025", raw: image2025, position: "object-[0%_50%]" },
+  { year: "2024", raw: image2024, position: "object-[0%_80%]" },
+  { year: "2023", raw: image2023, position: "object-[0%_40%]" },
+  { year: "2019", raw: image2019, position: "object-[0%_50%]" },
+  { year: "2018", raw: image2018, position: "object-[0%_80%]" },
+  { year: "2017", raw: image2017, position: "object-bottom" },
+  { year: "2016", raw: image2016, position: "object-[0%_80%]" },
+  { year: "2015", raw: image2015, position: "" },
+];
+
+const descriptions: Record<string, string> = {
+  "2025": "2025, Valparaíso",
+  "2024": "2024, Concepción",
+  "2023": "2023, Valparaíso",
+  "2019": "2019, Valdivia",
+  "2018": "2018, Santiago",
+  "2017": "2017, Concepción",
+  "2016": "2016, La Serena",
+  "2015": "2015, Valparaíso",
+};
+
+const carouselImages = await Promise.all(
+  rawImages.map(async ({ year, raw, position }) => {
+    const optimized = await getImage({ src: raw, width: 1200, format: "webp" });
+    return { src: optimized.src, description: descriptions[year], position };
+  })
+);
 ---
 
 <Page title="Acerca">
-  <Carousel slot="before-article" client:load />
+  <Carousel slot="before-article" images={carouselImages} client:load />
   <h1>¿Qué es el CIPC?</h1>
   <p>
     El <strong>Campamento Invernal de Programación Competitiva</strong> es una escuela de invierno

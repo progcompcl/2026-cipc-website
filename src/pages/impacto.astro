@@ -1,12 +1,34 @@
 ---
 import Page from "../layouts/Page.astro";
 import ImpactoCarousel from "../components/ImpactoCarousel";
-import { Image } from "astro:assets";
+import { Image, getImage } from "astro:assets";
 
 import foto1 from "../assets/fotos-impacto/foto1.jpg";
 import foto2 from "../assets/fotos-impacto/foto2.jpg";
 import foto3 from "../assets/fotos-impacto/foto3.jpg";
 import foto4 from "../assets/fotos-impacto/foto4.jpg";
+
+import campamento1 from "../assets/fotos-campamento/p1110247.jpg";
+import campamento2 from "../assets/fotos-campamento/IMG_20260404_222156_790.jpg";
+import campamento3 from "../assets/fotos-campamento/p1110363.jpg";
+import campamento4 from "../assets/fotos-campamento/p1110254.jpg";
+import campamento5 from "../assets/fotos-campamento/p1110423.jpg";
+
+const carouselFotos = await Promise.all([
+  getImage({ src: campamento1, width: 1200, format: "webp" }),
+  getImage({ src: campamento2, width: 1200, format: "webp" }),
+  getImage({ src: campamento3, width: 1200, format: "webp" }),
+  getImage({ src: campamento4, width: 1200, format: "webp" }),
+  getImage({ src: campamento5, width: 1200, format: "webp" }),
+]);
+
+const fotosProps = [
+  { src: carouselFotos[0].src, alt: "CIPC 2025 - sesión de clases" },
+  { src: carouselFotos[1].src, alt: "CIPC 2025 - charla de sponsor" },
+  { src: carouselFotos[2].src, alt: "CIPC 2025 - trabajo en equipo" },
+  { src: carouselFotos[3].src, alt: "CIPC 2025 - sesión práctica" },
+  { src: carouselFotos[4].src, alt: "CIPC 2025 - competencia" },
+];
 
 import logoGoogle from "../assets/logos/google.svg";
 import logoMicrosoft from "../assets/logos/microsoft.svg";
@@ -42,7 +64,7 @@ const logoSponsors = [
 ---
 
 <Page title="Impacto">
-  <ImpactoCarousel slot="before-article" client:load />
+  <ImpactoCarousel slot="before-article" fotos={fotosProps} client:load />
 
   <h1>Impacto del CIPC</h1>
 
@@ -115,6 +137,7 @@ const logoSponsors = [
       <Image
         src={foto}
         alt={`Foto CIPC ${i + 1}`}
+        width={700}
         class="w-full h-40 md:h-50 object-cover"
       />
     ))}
