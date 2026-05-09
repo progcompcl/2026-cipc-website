@@ -5,6 +5,9 @@ interface Props {
 }
 const { title, bodyClasses = [] } = Astro.props;
 import "../styles/global.css";
+import interLatinUrl from "@fontsource/inter/files/inter-latin-400-normal.woff2?url";
+import archivoLatinUrl from "@fontsource-variable/archivo/files/archivo-latin-wght-normal.woff2?url";
+import jetbrainsLatinUrl from "@fontsource/jetbrains-mono/files/jetbrains-mono-latin-400-normal.woff2?url";
 ---
 
 <!doctype html>
@@ -19,6 +22,9 @@ import "../styles/global.css";
       content="Campamento Invernal de Programación Competitiva en Chile"
     />
     <title>CIPC{title && " - " + title}</title>
+    <link rel="preload" href={interLatinUrl} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={archivoLatinUrl} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={jetbrainsLatinUrl} as="font" type="font/woff2" crossorigin />
     <script src="../lib/theme.ts"></script>
   </head>
   <body class:list={bodyClasses}>
