@@ -165,16 +165,16 @@ const logoSponsors = [
                 src={s.src}
                 alt={s.name}
                 title={s.name}
+                width={400}
                 class:list={["h-12 w-auto max-w-full object-contain mx-auto", s.darkSrc ? "dark:hidden" : ""]}
-                inferSize
               />
               {s.darkSrc && (
                 <Image
                   src={s.darkSrc}
                   alt={s.name}
                   title={s.name}
+                  width={400}
                   class="h-12 w-auto max-w-full object-contain mx-auto hidden dark:block"
-                  inferSize
                 />
               )}
             </td>
