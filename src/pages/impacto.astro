@@ -12,28 +12,32 @@ import logoGoogle from "../assets/logos/google.svg";
 import logoMicrosoft from "../assets/logos/microsoft.svg";
 import logoFacebook from "../assets/logos/facebook.png";
 import logoTCS from "../assets/logos/tcs.png";
+import logoTCSDark from "../assets/logos/tcs-dark.png";
 import logoNTTData from "../assets/logos/nttdata.svg";
 import logoSynopsys from "../assets/logos/synopsys.svg";
 import logoFintual from "../assets/logos/fintual.png";
 import logoCero from "../assets/logos/cero.svg";
+import logoCeroDark from "../assets/logos/cero-dark.svg";
 import logoCENIA from "../assets/logos/cenia.png";
 import logoNICChile from "../assets/logos/nic-chile.png";
 import logoJaneStreet from "../assets/logos/jane-street.png";
+import logoJaneStreetDark from "../assets/logos/jane-street-dark.png";
 import logoUnholster from "../assets/logos/unholster.png";
+import logoUnholsterDark from "../assets/logos/unholster-dark.png";
 
 const logoSponsors = [
   { name: "Google", src: logoGoogle },
   { name: "Microsoft", src: logoMicrosoft },
   { name: "Facebook", src: logoFacebook },
-  { name: "TCS", src: logoTCS },
+  { name: "TCS", src: logoTCS, darkSrc: logoTCSDark },
   { name: "NTT Data", src: logoNTTData },
   { name: "Synopsys", src: logoSynopsys },
   { name: "Fintual", src: logoFintual },
-  { name: "Cero", src: logoCero },
+  { name: "Cero", src: logoCero, darkSrc: logoCeroDark },
   { name: "CENIA", src: logoCENIA },
   { name: "NIC Chile", src: logoNICChile },
-  { name: "Unholster", src: logoUnholster },
-  { name: "Jane Street", src: logoJaneStreet },
+  { name: "Unholster", src: logoUnholster, darkSrc: logoUnholsterDark },
+  { name: "Jane Street", src: logoJaneStreet, darkSrc: logoJaneStreetDark },
 ];
 ---
 
@@ -138,9 +142,18 @@ const logoSponsors = [
                 src={s.src}
                 alt={s.name}
                 title={s.name}
-                class="h-12 w-auto max-w-full object-contain mx-auto"
+                class:list={["h-12 w-auto max-w-full object-contain mx-auto", s.darkSrc ? "dark:hidden" : ""]}
                 inferSize
               />
+              {s.darkSrc && (
+                <Image
+                  src={s.darkSrc}
+                  alt={s.name}
+                  title={s.name}
+                  class="h-12 w-auto max-w-full object-contain mx-auto hidden dark:block"
+                  inferSize
+                />
+              )}
             </td>
           ))}
           {row.length < 3 && Array.from({ length: 3 - row.length }, () => <td class="w-1/3" />)}

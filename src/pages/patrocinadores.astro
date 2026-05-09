@@ -2,6 +2,7 @@
 import Page from "../layouts/Page.astro";
 import { Image } from "astro:assets";
 import logoJaneStreet from "../assets/logos/jane-street.png";
+import logoJaneStreetDark from "../assets/logos/jane-street-dark.png";
 ---
 
 <Page title="Patrocinadores">
@@ -17,7 +18,13 @@ import logoJaneStreet from "../assets/logos/jane-street.png";
       <Image
         src={logoJaneStreet}
         alt="Jane Street"
-        class="h-16 w-auto object-contain"
+        class="h-16 w-auto object-contain dark:hidden"
+        inferSize
+      />
+      <Image
+        src={logoJaneStreetDark}
+        alt="Jane Street"
+        class="h-16 w-auto object-contain hidden dark:block"
         inferSize
       />
     </div>
