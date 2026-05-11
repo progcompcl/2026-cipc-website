@@ -3,6 +3,7 @@ import Page from "../layouts/Page.astro";
 import { Image } from "astro:assets";
 import logoJaneStreet from "../assets/logos/jane-street.png";
 import logoJaneStreetDark from "../assets/logos/jane-street-dark.png";
+import logoNicChile from "../assets/logos/nic-chile.png";
 ---
 
 <Page title="Patrocinadores">
@@ -38,6 +39,27 @@ import logoJaneStreetDark from "../assets/logos/jane-street-dark.png";
         Jane Street apoya activamente la comunidad de programación competitiva a
         nivel mundial, patrocinando competencias e iniciativas educativas para
         estudiantes destacados.
+      </p>
+    </div>
+  </div>
+
+  <div class="not-prose flex flex-col md:flex-row items-center gap-8 my-8">
+    <div class="flex-shrink-0 flex items-center justify-center w-full md:w-48">
+      <Image
+        src={logoNicChile}
+        alt="NIC Chile"
+        width={300}
+        class="h-16 w-auto object-contain"
+      />
+    </div>
+    <div>
+      <h2 class="text-xl font-bold mb-2 mt-0">NIC Chile</h2>
+      <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
+        NIC Chile es la entidad encargada de administrar el Registro de Nombres
+        de Dominio .CL desde 1987. Opera la infraestructura DNS que
+        permite a personas, empresas e instituciones construir su identidad en
+        Internet bajo el dominio nacional, con más de 730.000 nombres registrados
+        actualmente.
       </p>
     </div>
   </div>
