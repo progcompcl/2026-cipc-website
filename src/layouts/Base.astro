@@ -25,6 +25,7 @@ import jetbrainsLatinUrl from "@fontsource/jetbrains-mono/files/jetbrains-mono-l
     <link rel="preload" href={interLatinUrl} as="font" type="font/woff2" crossorigin />
     <link rel="preload" href={archivoLatinUrl} as="font" type="font/woff2" crossorigin />
     <link rel="preload" href={jetbrainsLatinUrl} as="font" type="font/woff2" crossorigin />
+    <slot name="head" />
     <script src="../lib/theme.ts"></script>
   </head>
   <body class:list={bodyClasses}>

@@ -1,61 +1,114 @@
 ---
 import Header from "../components/Header.astro";
-import background from "../assets/valdivia.jpg";
+import fondoValdivia from "../assets/fondo-valdivia.png";
+import logoCipc from "../assets/logo-cipc.svg";
+import logoProgcompcl from "../assets/logo-progcompcl.png";
+import logoUss from "../assets/logo-uss.png";
+import logoUach from "../assets/logo-uach.png";
 import Base from "../layouts/Base.astro";
 import { Link } from "@/components/ui/link";
-import { Info, Bell, Terminal } from "lucide-react";
+import { Info, Terminal } from "lucide-react";
 import { Image } from "astro:assets";
-import logoHero from "../assets/logo-hero.svg";
 ---
 
 <Base title="Inicio" bodyClasses={["dark"]}>
+  <link
+    slot="head"
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+  />
+
   <Header variant="home" />
-  <main class="flex flex-col h-[100dvh] justify-center items-center">
+
+  <main class="relative min-h-[100dvh] flex flex-col">
     <Image
-      class="absolute top-0 left-0 h-[100dvh] w-full -z-10 filter brightness-[0.5] object-cover object-[90%]"
-      src={background}
+      class="absolute inset-0 h-full w-full -z-10 object-cover brightness-[0.8]"
+      src={fondoValdivia}
       alt="Valdivia y su río"
       width={1920}
-      quality={75}
+      quality={80}
     />
-    <div id="hero" class="flex flex-col items-center">
-      <div id="hero-text" class="flex flex-col items-center">
-        <Image
-          src={logoHero}
-          alt="CIPC"
-          class="w-[clamp(18rem,30vw,40rem)]"
-        />
-        <h2
-          class="mt-4 text-center font-title text-[clamp(1rem,2.5vw,1.75rem)] font-extrabold text-white [text-shadow:0_2px_25px_rgba(0,0,0,1),0_0_12px_rgba(0,0,0,1)]"
+
+    <div
+      class="flex flex-col items-center max-w-2xl mx-auto"
+    >
+      <div class="grid grid-cols-4 gap-8 mt-6 mb-4 px-6 w-full">
+        <div class="flex items-center justify-center">
+          <Image src={logoCipc} alt="CIPC" class="object-contain" />
+        </div>
+        <div class="flex items-center justify-center">
+          <Image src={logoProgcompcl} alt="ProgcompCL" class="object-contain" />
+        </div>
+        <div class="flex items-center justify-center">
+          <Image src={logoUss} alt="Universidad San Sebastián" class="object-contain" />
+        </div>
+        <div class="flex items-center justify-center">
+          <Image src={logoUach} alt="Universidad Austral de Chile" class="object-contain" />
+        </div>
+      </div>
+
+      <!-- Bloque de texto principal -->
+      <div class="flex flex-col items-center w-full mb-6" style="line-height: 1;">
+
+        <p
+          class="text-logo-orange text-center"
+          style="font-family: var(--font-squada); font-size: min(8vw, 3.5rem); line-height: 0.9; text-shadow: 0 1px 4px rgba(0,0,0,0.95), 0 3px 12px rgba(0,0,0,0.8);"
         >
-          Campamento Invernal de <span class="text-logo-orange">Programación Competitiva</span>
-        </h2>
-        <h3
-          id="hero-subtitle"
-          class="mt-4 text-md lg:text-lg text-center text-white text-shadow-black text-shadow-lg"
+          9° CAMPAMENTO INVERNAL DE
+        </p>
+
+        <p
+          class="text-white text-center"
+          style="font-family: var(--font-squada); font-size: min(16vw, 7rem); line-height: 0.8; text-shadow: 0 1px 4px rgba(0,0,0,0.95), 0 3px 12px rgba(0,0,0,0.8);"
         >
-          20 al 31 de julio, 2026 <br /> Valdivia  <br /> Universidad San Sebastián y Universidad Austral de Chile
-        </h3>
-        <h2
-          class="mt-4 text-lg lg:text-lg text-center text-white text-shadow-black text-shadow-lg"
+          PROGRAMACIÓN
+        </p>
+
+        <p
+          class="text-white text-center"
+          style="font-family: var(--font-squada); font-size: min(16vw, 7rem); line-height: 0.8; text-shadow: 0 1px 4px rgba(0,0,0,0.95), 0 3px 12px rgba(0,0,0,0.8);"
+        >
+          COMPETITIVA
+        </p>
+
+        <p
+          class="text-logo-orange text-center"
+          style="font-family: var(--font-lobster); font-size: min(8vw, 3.5rem); line-height: 0.6; margin-top: -0.08em; text-shadow: 0 1px 4px rgba(0,0,0,0.95), 0 3px 12px rgba(0,0,0,0.8);"
+        >
+          Valdivia 2026
+        </p>
+
+        <p
+          class="text-white text-center"
+          style="font-family: var(--font-squada); font-size: min(6vw, 2rem); line-height: 1.3; margin-top: 0.7em; text-shadow: 0 1px 4px rgba(0,0,0,0.95), 0 3px 12px rgba(0,0,0,0.8);"
+        >
+          20 al 31 de julio
+        </p>
+      </div>
+
+      <!-- Botones e info inscripción -->
+      <div class="flex flex-col items-center pb-1">
+        <p
+          class="text-white text-sm text-center mb-1"
+          style="text-shadow: 0 1px 4px rgba(0,0,0,0.95), 0 3px 12px rgba(0,0,0,0.8);"
         >
           Primer llamado de inscripciones abierto hasta el 14 de Junio
-        </h2>
-      </div>
-      <div class="flex flex-col items-center">
-        <Link
-          variant="default"
-          size="lg"
-          className="m-2 bg-logo-orange text-white hover:bg-logo-orange/90"
-          href="https://forms.gle/8XKYezsWZ7rLYSeJ6"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Terminal className="mr-2" /> Inscríbete aquí
-        </Link>
-        <Link variant="secondary" size="lg" className="m-2" href="/acerca/"
-          ><Info /> Más información</Link
-        >
+        </p>
+        <div class="flex flex-row gap-2 flex-wrap justify-center">
+          <Link
+            variant="default"
+            size="lg"
+            className="bg-logo-orange text-white hover:bg-logo-orange/90 shadow-lg shadow-black/40"
+            href="https://forms.gle/8XKYezsWZ7rLYSeJ6"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Terminal className="mr-2" /> Inscríbete aquí
+          </Link>
+          <Link variant="secondary" size="lg" className="shadow-lg shadow-black/40" href="/acerca/">
+            <Info /> Más información
+          </Link>
+        </div>
       </div>
     </div>
   </main>

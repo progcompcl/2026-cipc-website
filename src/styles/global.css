@@ -1,6 +1,7 @@
 @import "@fontsource/inter";
 @import "@fontsource/jetbrains-mono";
 @import "@fontsource-variable/archivo";
+@import "@fontsource/squada-one";
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -11,6 +12,8 @@
   --font-sans: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
   --font-mono: "JetBrains Mono", "Courier New", Courier, monospace;
   --font-title: "Archivo Variable", "Arial Black", sans-serif;
+  --font-squada: "Squada One", "Arial Narrow", sans-serif;
+  --font-lobster: "Lobster", cursive;
 
   --color-logo-negative: #f36148;
   --color-logo-orange: #ffa600; /* 500 Default */
