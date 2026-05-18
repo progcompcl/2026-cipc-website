@@ -300,6 +300,11 @@
   "resolved" "https://registry.npmjs.org/@fontsource/jetbrains-mono/-/jetbrains-mono-5.2.5.tgz"
   "version" "5.2.5"
 
+"@fontsource/lobster@^5.2.8":
+  "integrity" "sha512-5xlo4rcvefhac1tnwingFR9OT9wZYUVwlm4Iemx21flMCH8Z7mS4bNHosUtoRodPB8KLLFgywfjUbyt5rNRLng=="
+  "resolved" "https://registry.npmjs.org/@fontsource/lobster/-/lobster-5.2.8.tgz"
+  "version" "5.2.8"
+
 "@fontsource/squada-one@^5.2.8":
   "integrity" "sha512-Nwj+D/aROr8igYhKEf+MuG8YDeTOhOqUFI8f1QMCbjktGA+xJ4TTbZxWDVlZuNCi1bU8+3Ah2PRBTSMLXLiQSA=="
   "resolved" "https://registry.npmjs.org/@fontsource/squada-one/-/squada-one-5.2.8.tgz"
