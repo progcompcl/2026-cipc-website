@@ -31,19 +31,19 @@ interface Semana {
 // ---- Horarios por nivel ----
 
 const horariosInicial: Horario[] = [
-  { actividad: "Clase",     s1: "09:00 - 10:40", s2: "09:00 - 10:40" },
+  { actividad: "Clase",           s1: "09:00 - 10:40", s2: "09:00 - 10:40" },
   { actividad: "Coffee Break",    s1: "10:40 - 11:00", s2: "10:40 - 11:00" },
-  { actividad: "Clase",     s1: "11:00 - 12:20", s2: "11:00 - 12:00" },
-  { actividad: "Almuerzo",  s1: "12:20 - 13:30", s2: "12:00 - 13:30" },
-  { actividad: "Contest",   s1: "13:30 - 18:30", s2: "13:30 - 18:30" },
+  { actividad: "Clase",           s1: "11:00 - 12:20", s2: "11:00 - 12:00" },
+  { actividad: "Almuerzo",        s1: "12:20 - 13:30", s2: "12:00 - 13:30" },
+  { actividad: "Contest",         s1: "13:30 - 18:30", s2: "13:30 - 18:30" },
 ];
 
 const horariosAvanzado: Horario[] = [
-  { actividad: "Clase",     s1: "09:00 - 11:00", s2: "09:00 - 11:00" },
+  { actividad: "Clase",           s1: "09:00 - 11:00", s2: "09:00 - 11:00" },
   { actividad: "Coffee Break",    s1: "11:00 - 11:20", s2: "11:00 - 11:20" },
-  { actividad: "Clase",     s1: "11:20 - 12:20", s2: "11:20 - 12:00" },
-  { actividad: "Almuerzo",  s1: "12:20 - 13:30", s2: "12:00 - 13:30" },
-  { actividad: "Contest",   s1: "13:30 - 18:30", s2: "13:30 - 18:30" },
+  { actividad: "Clase",           s1: "11:20 - 12:20", s2: "11:20 - 12:00" },
+  { actividad: "Almuerzo",        s1: "12:20 - 13:30", s2: "12:00 - 13:30" },
+  { actividad: "Contest",         s1: "13:30 - 18:30", s2: "13:30 - 18:30" },
 ];
 
 // ---- Itinerarios ----
@@ -55,7 +55,7 @@ const inicial: Semana = {
     { dia: "Miércoles 22", temas: ["Pilas y colas", "Set y map"],           profesor: null },
     { dia: "Jueves 23",    temas: ["Programación Dinámica"],                profesor: null },
     { dia: "Viernes 24",   temas: ["Resolución de Problemas"],              profesor: null, nota: "Actividades hasta las 16:30" },
-    { dia: "Sábado 25",    temas: ["Descanso"],  profesor: null, especial: true, nota: "Actividad Recreativa Sorpresa" },
+    { dia: "Sábado 25",    temas: ["Descanso"],                             profesor: null, especial: true, nota: "Actividad Recreativa Sorpresa" },
     { dia: "Domingo 26",   temas: ["Descanso"],                             profesor: null, especial: true },
     { dia: "Lunes 27",     temas: ["Brute force", "Matemáticas"],           profesor: null },
     { dia: "Martes 28",    temas: ["Grafos I"],                             profesor: null },
@@ -67,17 +67,17 @@ const inicial: Semana = {
 
 const avanzado: Semana = {
   dias: [
-    { dia: "Lunes 20",     temas: ["Divide & Conquer Aplicado"],                  profesor: null },
-    { dia: "Martes 21",    temas: ["EDD's persistentes"],                         profesor: null },
-    { dia: "Miércoles 22", temas: ["Hashing y Prefix Function", "Aho-Corasick"],  profesor: null },
-    { dia: "Jueves 23",    temas: ["Programación Dinámica Avanzada"],             profesor: null },
-    { dia: "Viernes 24",   temas: ["Sqrt tricks y Algoritmos offline"],           profesor: null, nota: "Actividades hasta las 16:30" },
-    { dia: "Sábado 25",    temas: ["Descanso"],  profesor: null, especial: true, nota: "Actividad Recreativa Sorpresa" },
-    { dia: "Domingo 26",   temas: ["Descanso"],                                   profesor: null, especial: true },
+    { dia: "Lunes 20",     temas: ["Divide & Conquer Aplicado"],                          profesor: null },
+    { dia: "Martes 21",    temas: ["EDD's persistentes"],                                 profesor: null },
+    { dia: "Miércoles 22", temas: ["Hashing y Prefix Function", "Aho-Corasick"],          profesor: null },
+    { dia: "Jueves 23",    temas: ["Programación Dinámica Avanzada"],                     profesor: null },
+    { dia: "Viernes 24",   temas: ["Sqrt tricks y Algoritmos offline"],                   profesor: null, nota: "Actividades hasta las 16:30" },
+    { dia: "Sábado 25",    temas: ["Descanso"],                                           profesor: null, especial: true, nota: "Actividad Recreativa Sorpresa" },
+    { dia: "Domingo 26",   temas: ["Descanso"],                                           profesor: null, especial: true },
     { dia: "Lunes 27",     temas: ["Aritmética Modular, T. de Números,", "T. de Juegos"], profesor: null },
-    { dia: "Martes 28",    temas: ["Flujo"],                                     profesor: null },
+    { dia: "Martes 28",    temas: ["Flujo"],                                              profesor: null },
     { dia: "Miércoles 29", temas: ["Resolución de Problemas"],                            profesor: null },
-    { dia: "Jueves 30",    temas: ["Geometría"],                                          profesor: null },
+    { dia: "Jueves 30",    temas: ["Geometría Computacional"],                                          profesor: null },
     { dia: "Viernes 31",   temas: ["Cierre"],                                             profesor: null, especial: true, nota: "Actividades hasta las 13:30" },
   ],
 };
