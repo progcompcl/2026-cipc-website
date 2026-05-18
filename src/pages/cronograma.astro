@@ -1,10 +1,11 @@
 ---
 import Page from "../layouts/Page.astro";
+import CronogramaComponent from "../components/Cronograma.tsx";
 ---
 
 <Page title="Cronograma">
-  <div class="not-prose flex flex-col items-center justify-center py-24 text-center">
-    <h1 class="text-3xl font-bold mb-4">Cronograma</h1>
-    <p class="text-xl text-muted-foreground">Próximamente</p>
+  <h1>Cronograma</h1>
+  <div class="not-prose mt-8">
+    <CronogramaComponent client:load />
   </div>
 </Page>
