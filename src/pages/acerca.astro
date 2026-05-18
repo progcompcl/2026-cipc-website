@@ -127,25 +127,42 @@ const carouselImages = await Promise.all(
     para todos los asistentes.
   </p>
 
-  {/* <p>
-    El casino de la universidad estará disponible para comprar almuerzo a precios
+  <p>
+    Los casinos de ambas universidades estarán disponibles para comprar almuerzo a precios
     accesibles, y además, durante las clases se ofrecerá un <strong><i>coffee break</i> gratuito</strong>
     para todos los asistentes.
-  </p> */}
-
-  {/* <h2>Becas</h2>
-  <p>
-    Para quienes necesiten apoyo económico, el campamento ofrece becas destinadas 
-    a <strong>ayudar a costear transporte, hospedaje y alimentación</strong>. Para postular, debes
-    completar el formulario de inscripción indicando un presupuesto estimado de 
-    tus gastos y explicando brevemente por qué deberías recibir la beca. Ten en 
-    cuenta que la postulación es individual y no por equipo. Se buscará maximizar
-    la diversidad geográfica e institucional entre los beneficiados.
-  </p> */}
+  </p>
 
   <div class="min-h-[1900px]">
     <h2>Preguntas frecuentes</h2>
     <FAQAccordion client:load />
+
+    <h2>Ubicación</h2>
+    <p>
+      El campamento se realizará en dos sedes dentro de la ciudad de Valdivia:
+    </p>
+    <div class="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+      <div class="flex flex-col">
+        <h3 class="text-base font-semibold mb-2">Universidad San Sebastián</h3>
+        <iframe
+          src="https://maps.google.com/maps?q=Universidad+San+Sebastián+Valdivia&output=embed"
+          class="w-full rounded-lg border"
+          height="300"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div class="flex flex-col">
+        <h3 class="text-base font-semibold mb-2">Universidad Austral de Chile</h3>
+        <iframe
+          src="https://maps.google.com/maps?q=Informática+Universidad+Austral+de+Chile+Valdivia&output=embed"
+          class="w-full rounded-lg border"
+          height="300"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
 
     <h2>Contacto</h2>
 
