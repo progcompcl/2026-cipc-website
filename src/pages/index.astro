@@ -5,6 +5,9 @@ import logoCipc from "../assets/logo-cipc.svg";
 import logoProgcompcl from "../assets/logo-progcompcl.png";
 import logoUss from "../assets/logo-uss.png";
 import logoUach from "../assets/logo-uach.png";
+import logoTopsort from "../assets/logos/topsort.svg";
+import logoNicChile from "../assets/logos/nic-chile.png";
+import logoJaneStreet from "../assets/logos/jane-street.png";
 import Base from "../layouts/Base.astro";
 import { Link } from "@/components/ui/link";
 import { Info, Terminal } from "lucide-react";
@@ -15,9 +18,9 @@ import { Image } from "astro:assets";
 
   <Header variant="home" />
 
-  <main class="relative min-h-[100dvh] flex flex-col">
+  <main class="relative min-h-[100dvh] flex flex-col !pb-0">
     <Image
-      class="absolute inset-0 h-full w-full -z-10 object-cover brightness-[0.8] object-[center_68%]"
+      class="absolute inset-0 h-full w-full -z-10 object-cover brightness-[0.8] object-[center_65%]"
       src={fondoValdivia}
       alt="Valdivia y su río"
       width={1920}
@@ -82,7 +85,7 @@ import { Image } from "astro:assets";
       </div>
 
       <!-- Botones e info inscripción -->
-      <div class="flex flex-col items-center pb-1 px-2 md:px-6">
+      <div class="flex flex-col items-center pb-8 px-2 md:px-6">
         <p
           class="text-white text-sm text-center mb-1"
           style="text-shadow: 0 1px 4px rgba(0,0,0,0.95), 0 3px 12px rgba(0,0,0,0.8);"
@@ -103,6 +106,40 @@ import { Image } from "astro:assets";
           <Link variant="secondary" size="lg" className="shadow-lg shadow-black/40" href="/acerca/">
             <Info /> Más información
           </Link>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-auto w-full bg-white/50 backdrop-blur-md border-t border-white/20 py-2 px-4">
+      <div class="max-w-5xl mx-auto flex flex-col gap-1 items-center">
+        <p class="text-gray-700 text-[10px] uppercase tracking-widest text-center leading-none">
+          Con el apoyo de
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 md:gap-x-10">
+          <a href="/patrocinadores/" class="flex items-center" aria-label="Topsort">
+            <Image
+              src={logoTopsort}
+              alt="Topsort"
+              width={400}
+              class="h-8 md:h-9 w-auto object-contain"
+            />
+          </a>
+          <a href="/patrocinadores/" class="flex items-center" aria-label="NIC Chile">
+            <Image
+              src={logoNicChile}
+              alt="NIC Chile"
+              width={300}
+              class="h-8 md:h-9 w-auto object-contain"
+            />
+          </a>
+          <a href="/patrocinadores/" class="flex items-center" aria-label="Jane Street">
+            <Image
+              src={logoJaneStreet}
+              alt="Jane Street"
+              width={300}
+              class="h-8 md:h-9 w-auto object-contain"
+            />
+          </a>
         </div>
       </div>
     </div>
