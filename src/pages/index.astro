@@ -111,33 +111,33 @@ import { Image } from "astro:assets";
     </div>
 
     <div class="mt-auto w-full bg-white/50 backdrop-blur-md border-t border-white/20 py-2 px-4">
-      <div class="max-w-lg mx-auto flex flex-col gap-1 items-center">
+      <div class="mx-auto w-fit max-w-full flex flex-col gap-1 items-center">
         <p class="text-gray-700 text-[10px] uppercase tracking-widest text-center leading-none">
           Con el apoyo de
         </p>
-        <div class="flex items-center justify-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-14 xl:gap-x-20 w-full">
-          <a href="/patrocinadores/" class="flex items-center justify-center min-w-0 flex-1" aria-label="Topsort">
+        <div class="flex items-center justify-center gap-x-4 sm:gap-x-6 md:gap-x-10">
+          <a href="/patrocinadores/" class="flex items-center min-w-0 shrink" aria-label="Topsort">
             <Image
               src={logoTopsort}
               alt="Topsort"
               width={400}
-              class="max-h-8 md:max-h-9 max-w-full h-auto w-auto object-contain"
+              class="h-8 md:h-9 w-auto max-w-full object-contain"
             />
           </a>
-          <a href="/patrocinadores/" class="flex items-center justify-center min-w-0 flex-1" aria-label="NIC Chile">
+          <a href="/patrocinadores/" class="flex items-center min-w-0 shrink" aria-label="NIC Chile">
             <Image
               src={logoNicChile}
               alt="NIC Chile"
               width={300}
-              class="max-h-8 md:max-h-9 max-w-full h-auto w-auto object-contain"
+              class="h-8 md:h-9 w-auto max-w-full object-contain"
             />
           </a>
-          <a href="/patrocinadores/" class="flex items-center justify-center min-w-0 flex-1" aria-label="Jane Street">
+          <a href="/patrocinadores/" class="flex items-center min-w-0 shrink" aria-label="Jane Street">
             <Image
               src={logoJaneStreet}
               alt="Jane Street"
               width={300}
-              class="max-h-8 md:max-h-9 max-w-full h-auto w-auto object-contain"
+              class="h-8 md:h-9 w-auto max-w-full object-contain"
             />
           </a>
         </div>
