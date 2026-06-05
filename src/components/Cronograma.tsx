@@ -74,7 +74,7 @@ const avanzado: Semana = {
     { dia: "Viernes 24",   temas: ["Sqrt tricks y Algoritmos offline"],                   profesor: null, nota: "Actividades hasta las 16:30" },
     { dia: "Sábado 25",    temas: ["Descanso"],                                           profesor: null, especial: true, nota: "Actividad Recreativa Sorpresa" },
     { dia: "Domingo 26",   temas: ["Descanso"],                                           profesor: null, especial: true },
-    { dia: "Lunes 27",     temas: ["Aritmética Modular, T. de Números,", "T. de Juegos"], profesor: null },
+    { dia: "Lunes 27",     temas: ["Teoria de Juegos"], profesor: null },
     { dia: "Martes 28",    temas: ["Flujo"],                                              profesor: null },
     { dia: "Miércoles 29", temas: ["Resolución de Problemas"],                            profesor: null },
     { dia: "Jueves 30",    temas: ["Geometría Computacional"],                                          profesor: null },
