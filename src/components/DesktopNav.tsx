@@ -1,10 +1,12 @@
 import React from "react";
 import { NavLink } from "./NavLink";
+import { NavDropdown } from "./NavDropdown";
 
 interface NavItem {
   label: string;
-  href: string;
+  href?: string;
   isActive: boolean;
+  children?: { label: string; href: string }[];
 }
 
 interface DesktopNavProps {
@@ -15,12 +17,16 @@ export const DesktopNav: React.FC<DesktopNavProps> = ({ navItems }) => (
   <nav className="font-mono hidden lg:flex flex-auto justify-center text-nowrap">
     <ul className="flex w-full justify-center items-center gap-4">
       {navItems.map((item) => (
-        <li key={item.href}>
-          <NavLink
-            href={item.href}
-            label={item.label}
-            isActive={item.isActive}
-          />
+        <li key={item.label}>
+          {item.children ? (
+            <NavDropdown label={item.label} items={item.children} />
+          ) : (
+            <NavLink
+              href={item.href || "#"}
+              label={item.label}
+              isActive={item.isActive}
+            />
+          )}
         </li>
       ))}
     </ul>
