@@ -28,7 +28,7 @@ const navItemsData = [
   { 
     label: "ediciones", 
     children: [
-      { label: "CIPC 2026 (Valdivia)", href: "https://cipc2026.progcomp.cl" },
+      { label: "CIPC 2026 (Valdivia)", href: "https://cipc.progcomp.cl" },
       { label: "CIPC 2025 (Valparaíso)", href: "https://cipc2025.progcomp.cl" },
       { label: "CIPC 2024 (Concepción)", href: "https://cipc2024.progcomp.cl" },
       { label: "CIPC 2023 (Valparaíso)", href: "https://cipc2023.progcomp.cl" },
@@ -55,7 +55,6 @@ const navItems = navItemsData.map((item) => ({
     headerClasses,
   ]}
 >
-  {/* Logo */}
   <div id="header-logo" class="flex-1 basis-0">
     <a href="/">
       <Image
@@ -85,17 +84,14 @@ const navItems = navItemsData.map((item) => ({
     </a>
   </div>
 
-  {/* Header center, desktop nav */}
   <DesktopNav client:load navItems={navItems} />
 
-  {/* Header right side */}
   <div
     id="header-right"
     class="flex flex-1 basis-0 justify-end items-center gap-2"
   >
     {variant !== "home" && <ModeToggle client:visible />}
 
-    {/* Mobile navigation trigger */}
     <nav class="lg:hidden">
       <MobileNav client:load navItems={navItems} variant={variant} />
     </nav>
