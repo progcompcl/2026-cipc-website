@@ -13,6 +13,10 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# only npm is used in this project (see package-lock.json)
+yarn.lock
+pnpm-lock.yaml
+
 # environment variables
 .env
 .env.production
