@@ -25,25 +25,11 @@ const navItemsData = [
   { label: "patrocinadores", href: "/patrocinadores/" },
   { label: "impacto", href: "/impacto/" },
   { label: "organizadores", href: "/organizadores/" },
-  { 
-    label: "ediciones", 
-    children: [
-      { label: "CIPC 2026 (Valdivia)", href: "https://cipc.progcomp.cl" },
-      { label: "CIPC 2025 (Valparaíso)", href: "https://cipc2025.progcomp.cl" },
-      { label: "CIPC 2024 (Concepción)", href: "https://cipc2024.progcomp.cl" },
-      { label: "CIPC 2023 (Valparaíso)", href: "https://cipc2023.progcomp.cl" },
-      { label: "CIPC 2019 (Valdivia)", href: "https://cipc2019.progcomp.cl" },
-      { label: "CIPC 2018 (Santiago)", href: "https://cipc2018.progcomp.cl" },
-      { label: "CIPC 2017 (Concepción)", href: "https://cipc2017.progcomp.cl" },
-      { label: "CIPC 2016 (La serena)", href: "https://cipc2016.progcomp.cl" },
-      { label: "CIPC 2015 (Valparaíso)", href: "https://cipc2015.progcomp.cl" }
-    ]
-  },
 ];
 
 const navItems = navItemsData.map((item) => ({
   ...item,
-  isActive: item.href ? item.href === currentPath : false,
+  isActive: item.href === currentPath,
 }));
 ---
 
