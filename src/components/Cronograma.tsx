@@ -67,7 +67,7 @@ const inicial: Semana = {
 
 const avanzado: Semana = {
   dias: [
-    { dia: "Lunes 20",     temas: ["Divide & Conquer Aplicado"],                          profesor: null },
+    { dia: "Lunes 20",     temas: ["Algoritmos randomizados"],                          profesor: null },
     { dia: "Martes 21",    temas: ["EDD's persistentes"],                                 profesor: null },
     { dia: "Miércoles 22", temas: ["Hashing y Prefix Function", "Aho-Corasick"],          profesor: null },
     { dia: "Jueves 23",    temas: ["Programación Dinámica Avanzada"],                     profesor: null },
