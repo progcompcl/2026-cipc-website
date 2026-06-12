@@ -53,7 +53,7 @@ const inicial: Semana = {
     { dia: "Lunes 20",     temas: ["Complejidad Algorítmica y C++"],                       profesor: "Benjamín Letelier" },
     { dia: "Martes 21",    temas: ["Sorting y greedy", "Búsqueda binaria"],                profesor: "Alex Blanchard" },
     { dia: "Miércoles 22", temas: ["Pilas y colas", "Set y map"],                          profesor: "Blaz Korecic" },
-    { dia: "Jueves 23",    temas: ["Programación Dinámica"],                               profesor: "Constanza" },
+    { dia: "Jueves 23",    temas: ["Programación Dinámica"],                               profesor: "Constanza Vasquez" },
     { dia: "Viernes 24",   temas: ["Resolución de Problemas"],                             profesor: "Ignacio Muñoz", nota: "Actividades hasta las 16:30" },
     { dia: "Sábado 25",    temas: ["Descanso"],                                            profesor: null, especial: true, nota: "Actividad Recreativa Sorpresa" },
     { dia: "Domingo 26",   temas: ["Descanso"],                                            profesor: null, especial: true },
