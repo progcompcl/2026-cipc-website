@@ -6,6 +6,7 @@ import logoProgcompcl from "../assets/logo-progcompcl.png";
 import logoUss from "../assets/logo-uss.png";
 import logoUach from "../assets/logo-uach.png";
 import logoTopsort from "../assets/logos/topsort.svg";
+import logoOutliersCapital from "../assets/logos/outliers-capital.png";
 import logoNeuralworks from "../assets/logos/neuralworks.svg";
 import logoNicChile from "../assets/logos/nic-chile.png";
 import logoAlicantoLabs from "../assets/logos/alicanto-labs.png";
@@ -112,52 +113,64 @@ import { Image } from "astro:assets";
       </div>
     </div>
 
-    <div class="mt-auto w-full bg-white/50 backdrop-blur-md border-t border-white/20 py-2 px-2 sm:px-6 md:px-10">
-      <div class="mx-auto w-fit max-w-full flex flex-col gap-1 items-center">
+    <div class="mt-auto w-full bg-white/50 backdrop-blur-md border-t border-white/20 pb-3 pt-2 px-4 sm:px-6 md:px-7 lg:px-10">
+      <div class="mx-auto w-fit max-w-full flex flex-col gap-2 items-center">
         <p class="text-gray-700 text-[10px] uppercase tracking-widest text-center leading-none">
           Con el apoyo de
         </p>
-        <div class="flex items-center justify-center gap-x-2 sm:gap-x-6 md:gap-x-10">
-          <a href="/patrocinadores/" class="flex items-center min-w-0 shrink" aria-label="Topsort">
-            <Image
-              src={logoTopsort}
-              alt="Topsort"
-              width={400}
-              class="h-8 md:h-9 w-auto max-w-full object-contain py-1"
-            />
-          </a>
-          <a href="/patrocinadores/" class="flex items-center min-w-0 shrink" aria-label="NeuralWorks">
-            <Image
-              src={logoNeuralworks}
-              alt="NeuralWorks"
-              width={300}
-              class="h-8 md:h-9 w-auto max-w-full object-contain py-[0.625rem]"
-            />
-          </a>
-          <a href="/patrocinadores/" class="flex items-center min-w-0 shrink" aria-label="Alincanto Labs">
-            <Image
-              src={logoAlicantoLabs}
-              alt="AlicantoLabs"
-              width={300}
-              class="h-8 md:h-9 w-auto max-w-full object-contain"
-            />
-          </a>
-          <a href="/patrocinadores/" class="flex items-center min-w-0 shrink" aria-label="NIC Chile">
-            <Image
-              src={logoNicChile}
-              alt="NIC Chile"
-              width={300}
-              class="h-8 md:h-9 w-auto max-w-full object-contain"
-            />
-          </a>
-          <a href="/patrocinadores/" class="flex items-center min-w-0 shrink" aria-label="Jane Street">
-            <Image
-              src={logoJaneStreet}
-              alt="Jane Street"
-              width={300}
-              class="h-8 md:h-9 w-auto max-w-full object-contain"
-            />
-          </a>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-y-3 gap-x-4 sm:gap-x-6 md:gap-x-7 lg:gap-x-10">
+          <div class="flex items-center justify-center px-[15vw] sm:px-0 gap-x-8 sm:gap-x-6 md:gap-x-7 lg:gap-x-10">
+            <a href="/patrocinadores/" class="flex items-center min-w-0 shrink" aria-label="Topsort">
+              <Image
+                src={logoTopsort}
+                alt="Topsort"
+                width={400}
+                class="h-12 sm:h-8 md:h-9 w-auto max-w-full object-contain py-1"
+              />
+            </a>
+            <a href="/patrocinadores/" class="flex items-center min-w-0 shrink" aria-label="Outliers Capital">
+              <Image
+                src={logoOutliersCapital}
+                alt="Outliers Capital"
+                width={400}
+                class="h-12 sm:h-8 md:h-9 w-auto max-w-full object-contain py-1"
+              />
+            </a>
+          </div>
+          <div class="flex items-center justify-center gap-x-4 sm:gap-x-6 md:gap-x-7 lg:gap-x-10">
+            <a href="/patrocinadores/" class="flex items-center min-w-0 shrink" aria-label="NeuralWorks">
+              <Image
+                src={logoNeuralworks}
+                alt="NeuralWorks"
+                width={300}
+                class="h-10 sm:h-8 md:h-9 w-auto max-w-full object-contain py-[0.625rem]"
+              />
+            </a>
+            <a href="/patrocinadores/" class="flex items-center min-w-0 shrink" aria-label="Alincanto Labs">
+              <Image
+                src={logoAlicantoLabs}
+                alt="AlicantoLabs"
+                width={300}
+                class="h-10 sm:h-8 md:h-9 w-auto max-w-full object-contain"
+              />
+            </a>
+            <a href="/patrocinadores/" class="flex items-center min-w-0 shrink" aria-label="NIC Chile">
+              <Image
+                src={logoNicChile}
+                alt="NIC Chile"
+                width={300}
+                class="h-10 sm:h-8 md:h-9 w-auto max-w-full object-contain"
+              />
+            </a>
+            <a href="/patrocinadores/" class="flex items-center min-w-0 shrink" aria-label="Jane Street">
+              <Image
+                src={logoJaneStreet}
+                alt="Jane Street"
+                width={300}
+                class="h-10 sm:h-8 md:h-9 w-auto max-w-full object-contain"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </div>
