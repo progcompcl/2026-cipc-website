@@ -43,16 +43,6 @@ const carouselImages = await Promise.all(
   })
 );
 
-const editionLinks = [
-  { year: "2025", location: "Valparaíso", href: "https://cipc2025.progcomp.cl" },
-  { year: "2024", location: "Concepción", href: "https://cipc2024.progcomp.cl" },
-  { year: "2023", location: "Valparaíso", href: "https://cipc2023.progcomp.cl" },
-  { year: "2019", location: "Valdivia", href: "https://cipc2019.progcomp.cl" },
-  { year: "2018", location: "Santiago", href: "https://cipc2018.progcomp.cl" },
-  { year: "2017", location: "Concepción", href: "https://cipc2017.progcomp.cl" },
-  { year: "2016", location: "La Serena", href: "https://cipc2016.progcomp.cl" },
-  { year: "2015", location: "Valparaíso", href: "https://cipc2015.progcomp.cl" },
-];
 ---
 
 <Page title="Acerca">
@@ -136,9 +126,8 @@ const editionLinks = [
 
   <h2>Costo</h2>
   <p>
-    La inscripción y participación en el campamento son <strong>totalmente gratuitas</strong>. 
-    Sin embargo, cada participante debe cubrir sus propios gastos de transporte,
-    hospedaje y alimentación. 
+    La inscripción y participación en el campamento son <strong>totalmente gratuitas</strong>. Sin embargo, cada participante debe cubrir sus propios gastos de transporte,
+    hospedaje y alimentación.
   </p>
   <p>
     Los casinos de ambas universidades estarán disponibles para comprar almuerzo a precios
@@ -196,17 +185,6 @@ const editionLinks = [
       inclusivo y respetuoso para todas las personas involucradas en el
       campamento.
     </p>
-
-    <h2>Ediciones anteriores</h2>
-    <ul>
-      {editionLinks.map(({ year, location, href }) => (
-        <li>
-          <a href={href} target="_blank" rel="noopener noreferrer">
-            CIPC {year} ({location})
-          </a>
-        </li>
-      ))}
-    </ul>
   </div>
 </Page>
 

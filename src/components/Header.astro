@@ -3,7 +3,6 @@ interface Props {
   variant?: "default" | "home";
 }
 const { variant = "default" } = Astro.props;
-
 import { Image } from "astro:assets";
 import logo from "../assets/logo.svg";
 import logoSmall from "../assets/logo-small.svg";
@@ -17,6 +16,7 @@ const headerClasses = {
   default: "bg-gray-50 dark:bg-gray-900 shadow-md",
   home: "bg-black/10 backdrop-filter backdrop-blur",
 }[variant];
+
 const currentPath = Astro.url.pathname;
 const navItemsData = [
   { label: "inicio", href: "/" },
@@ -31,6 +31,19 @@ const navItems = navItemsData.map((item) => ({
   ...item,
   isActive: item.href === currentPath,
 }));
+
+// Migrado desde acerca.astro
+const editionLinks = [
+  { year: "2026", location: "Valdivia", href: "https://cipc.progcomp.cl" },
+  { year: "2025", location: "Valparaíso", href: "https://cipc2025.progcomp.cl" },
+  { year: "2024", location: "Concepción", href: "https://cipc2024.progcomp.cl" },
+  { year: "2023", location: "Valparaíso", href: "https://cipc2023.progcomp.cl" },
+  { year: "2019", location: "Valdivia", href: "https://cipc2019.progcomp.cl" },
+  { year: "2018", location: "Santiago", href: "https://cipc2018.progcomp.cl" },
+  { year: "2017", location: "Concepción", href: "https://cipc2017.progcomp.cl" },
+  { year: "2016", location: "La Serena", href: "https://cipc2016.progcomp.cl" },
+  { year: "2015", location: "Valparaíso", href: "https://cipc2015.progcomp.cl" },
+];
 ---
 
 <header
@@ -76,6 +89,25 @@ const navItems = navItemsData.map((item) => ({
     id="header-right"
     class="flex flex-1 basis-0 justify-end items-center gap-2"
   >
+    {/* Botón desplegable para Ediciones Anteriores */}
+    <div class="relative group">
+      <button class="text-sm font-medium hover:text-primary px-3 py-2 rounded-md transition-colors inline-flex items-center gap-1">
+        Ediciones
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+      </button>
+      <div class="absolute right-0 mt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-md shadow-lg overflow-hidden z-50">
+        <ul class="py-1">
+          {editionLinks.map(({ year, location, href }) => (
+            <li>
+              <a href={href} target="_blank" rel="noopener noreferrer" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">
+                {year} - {location}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
     {variant !== "home" && <ModeToggle client:visible />}
 
     <nav class="lg:hidden">
