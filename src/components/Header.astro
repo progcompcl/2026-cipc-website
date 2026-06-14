@@ -32,7 +32,6 @@ const navItems = navItemsData.map((item) => ({
   isActive: item.href === currentPath,
 }));
 
-// Migrado desde acerca.astro
 const editionLinks = [
   { year: "2026", location: "Valdivia", href: "https://cipc.progcomp.cl" },
   { year: "2025", location: "Valparaíso", href: "https://cipc2025.progcomp.cl" },
@@ -89,17 +88,19 @@ const editionLinks = [
     id="header-right"
     class="flex flex-1 basis-0 justify-end items-center gap-2"
   >
-    {/* Botón desplegable para Ediciones Anteriores */}
-    <div class="relative group">
-      <button class="text-sm font-medium hover:text-primary px-3 py-2 rounded-md transition-colors inline-flex items-center gap-1">
-        Ediciones
+    {/* Botón desplegable mediante JS para soportar móviles y táctil */}
+    <div class="relative">
+      <button id="editions-menu-button" class="text-sm font-medium hover:text-primary px-2 sm:px-3 py-2 rounded-md transition-colors inline-flex items-center gap-1">
+        <span class="hidden sm:inline">Ediciones</span>
+        <span class="sm:hidden">Ed.</span>
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
       </button>
-      <div class="absolute right-0 mt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-md shadow-lg overflow-hidden z-50">
+      
+      <div id="editions-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-md shadow-lg overflow-hidden z-50">
         <ul class="py-1">
           {editionLinks.map(({ year, location, href }) => (
             <li>
-              <a href={href} target="_blank" rel="noopener noreferrer" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">
+              <a href={href} target="_blank" rel="noopener noreferrer" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
                 {year} - {location}
               </a>
             </li>
@@ -115,3 +116,29 @@ const editionLinks = [
     </nav>
   </div>
 </header>
+
+<script>
+  function initEditionsDropdown() {
+    const button = document.getElementById('editions-menu-button');
+    const dropdown = document.getElementById('editions-dropdown');
+
+    if (button && dropdown) {
+      // Abrir/cerrar al hacer clic en el botón
+      button.addEventListener('click', (event) => {
+        event.stopPropagation();
+        dropdown.classList.toggle('hidden');
+      });
+
+      // Cerrar al hacer clic fuera del menú
+      document.addEventListener('click', (event) => {
+        if (!dropdown.contains(event.target as Node)) {
+          dropdown.classList.add('hidden');
+        }
+      });
+    }
+  }
+
+  // Inicializar en la carga y asegurar que funcione con Astro View Transitions (si están activas)
+  initEditionsDropdown();
+  document.addEventListener('astro:page-load', initEditionsDropdown);
+</script>
