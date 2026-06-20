@@ -33,6 +33,14 @@ const accordionData: Props["data"] = [
     ),
   },
   {
+    title: "¿La inscripción tiene costo?",
+    description: (
+      <p>
+        La inscripción y participación en el campamento son totalmente gratutitas. Sin embargo, cada participante debe hacerse cargo de los gastos de transporte, alimentación y hospedaje durante el campamento.
+      </p>
+    ),
+  },
+  {
     title: "¿Quiénes pueden participar?",
     description: (
       <p>
@@ -113,17 +121,9 @@ const accordionData: Props["data"] = [
     description: (
       <p>
         Para las sesiones prácticas usaremos los computadores de los laboratorios de la
-        universidad, por lo que no es necesario llevar uno. Sin embargo, si prefieres
-        usar tu computador personal porque te resulta más cómodo, puedes traerlo sin 
-        problema.
-      </p>
-    ),
-  },
-  {
-    title: "¿La inscripción tiene costo?",
-    description: (
-      <p>
-        La inscripción y participación en el campamento son totalmente gratis.
+        universidad, por lo que no es necesario llevar uno. Aun así, muchos participantes
+        prefieren traer su computador personal porque les resulta más cómodo, puedes
+        hacerlo sin problema.
       </p>
     ),
   },
@@ -141,6 +141,15 @@ const accordionData: Props["data"] = [
           accesibles.
         </p>
       </>
+    ),
+  },
+  {
+    title: "¿Dónde me puedo hospedar?",
+    description: (
+      <p>
+        El hospedaje corre por cuenta propia de cada participante. Recomendamos
+        buscar opciones por Airbnb.
+      </p>
     ),
   },
     {
