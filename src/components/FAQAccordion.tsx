@@ -24,13 +24,11 @@ const accordionData: Props["data"] = [
     description: (
       <>
         <p>
-          El campamento se llevará a cabo entre el 20 y el 31 de julio de 2026, en la ciudad de Valdivia, Chile. La primera semana se realizará en la Universidad San Sebastián, y la segunda semana en la Universidad Austral de Chile.
+          El campamento se llevará a cabo entre el 20 y el 31 de julio de 2026, en la ciudad de Valdivia, Chile. La primera semana se realizará en la Universidad San Sebastián, y la segunda semana en la Universidad Austral de Chile, Campus Miraflores.
         </p>
-        {/*
         <p>
           Puedes encontrar más información en el <a href="/cronograma">cronograma</a>.
         </p>
-        */}
       </>
     ),
   },
