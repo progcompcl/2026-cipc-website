@@ -50,16 +50,16 @@ const horariosAvanzado: Horario[] = [
 
 const inicial: Semana = {
   dias: [
-    { dia: "Lunes 20",     temas: ["C++"],                                                 profesor: "Benjamín Letelier" },
+    { dia: "Lunes 20",     temas: ["C++"],                                                 profesor: "Benjamín Letelier", nota: "Acreditación 8:30 → Ceremonia de apertura → Foto grupal → Clase" },
     { dia: "Martes 21",    temas: ["Complejidad Algorítmica", "Pilas, colas, set y map"],  profesor: "Alex Blanchard" },
     { dia: "Miércoles 22", temas: ["Sorting y greedy", "Búsqueda binaria"],                profesor: "Blaz Korecic" },
-    { dia: "Jueves 23",    temas: ["Programación Dinámica"],                               profesor: "Constanza Vásquez" },
-    { dia: "Viernes 24",   temas: ["Resolución de Problemas"],                             profesor: "Ignacio Muñoz", nota: "Actividades hasta las 16:30" },
-    { dia: "Sábado 25",    temas: ["Descanso"],                                            profesor: null, especial: true, nota: "Actividad Recreativa Sorpresa" },
+    { dia: "Jueves 23",    temas: ["Programación Dinámica"],                               profesor: "Constanza Vásquez", nota: "Evento sponsor oro durante la tarde." },
+    { dia: "Viernes 24",   temas: ["Resolución de Problemas"],                             profesor: "Ignacio Muñoz", nota: "Charla sponsor TopSort durante clases. Actividades hasta las 16:30." },
+    { dia: "Sábado 25",    temas: ["Choripanada", "Paseo en barco"],                        profesor: null, especial: true, nota: "Cortesía de la organización. Sin costo para los participantes." },
     { dia: "Domingo 26",   temas: ["Descanso"],                                            profesor: null, especial: true },
     { dia: "Lunes 27",     temas: ["Brute force", "Matemáticas"],                          profesor: "Cristian Nettle" },
     { dia: "Martes 28",    temas: ["Grafos I"],                                            profesor: "Nicolas Rojas" },
-    { dia: "Miércoles 29", temas: ["Resolución de Problemas"],                             profesor: "Cristian Nettle" },
+    { dia: "Miércoles 29", temas: ["Resolución de Problemas"],                             profesor: "Cristian Nettle", nota: "Charla sponsor Neuralworks en la tarde." },
     { dia: "Jueves 30",    temas: ["Grafos II"],                                           profesor: "Alex Blanchard" },
     { dia: "Viernes 31",   temas: ["Cierre"],                                              profesor: null, especial: true, nota: "Actividades hasta las 13:30" },
   ],
@@ -67,16 +67,16 @@ const inicial: Semana = {
 
 const avanzado: Semana = {
   dias: [
-    { dia: "Lunes 20",     temas: ["Algoritmos randomizados"],                             profesor: "Sebastian Torrealba" },
+    { dia: "Lunes 20",     temas: ["Algoritmos randomizados"],                             profesor: "Sebastian Torrealba", nota: "Acreditación 8:30 → Ceremonia de apertura → Foto grupal → Clase" },
     { dia: "Martes 21",    temas: ["EDD's persistentes"],                                  profesor: "Benjamin Letelier" },
     { dia: "Miércoles 22", temas: ["Hashing y Prefix Function", "Aho-Corasick"],           profesor: "Ignacio Muñoz" },
-    { dia: "Jueves 23",    temas: ["Programación Dinámica Avanzada"],                      profesor: "Blaz Korecic" },
-    { dia: "Viernes 24",   temas: ["Sqrt tricks y Algoritmos offline"],                    profesor: "Abner Vidal", nota: "Actividades hasta las 16:30" },
-    { dia: "Sábado 25",    temas: ["Descanso"],                                            profesor: null, especial: true, nota: "Actividad Recreativa Sorpresa" },
+    { dia: "Jueves 23",    temas: ["Programación Dinámica Avanzada"],                      profesor: "Blaz Korecic", nota: "Evento sponsor oro durante la tarde." },
+    { dia: "Viernes 24",   temas: ["Sqrt tricks y Algoritmos offline"],                    profesor: "Abner Vidal", nota: "Charla sponsor TopSort durante clases. Actividades hasta las 16:30." },
+    { dia: "Sábado 25",    temas: ["Choripanada", "Paseo en barco"],                        profesor: null, especial: true, nota: "Cortesía de la organización. Sin costo para los participantes." },
     { dia: "Domingo 26",   temas: ["Descanso"],                                            profesor: null, especial: true },
     { dia: "Lunes 27",     temas: ["Teoria de Juegos"],                                    profesor: "Marcelo Lemus" },
     { dia: "Martes 28",    temas: ["Flujo"],                                               profesor: "Abner Vidal" },
-    { dia: "Miércoles 29", temas: ["Resolución de Problemas"],                             profesor: "Marcelo Lemus" },
+    { dia: "Miércoles 29", temas: ["Resolución de Problemas"],                             profesor: "Marcelo Lemus", nota: "Charla sponsor Neuralworks en la tarde." },
     { dia: "Jueves 30",    temas: ["Geometría Computacional"],                             profesor: "Sebastian Torrealba" },
     { dia: "Viernes 31",   temas: ["Cierre"],                                              profesor: null, especial: true, nota: "Actividades hasta las 13:30" },
   ],
@@ -184,10 +184,10 @@ export default function Cronograma() {
       <TablaHorario horarios={horarios} />
 
       <p className="mt-4 text-sm">
-        El primer día, las actividades inician a las 8:30 para la entrega de credenciales y acreditación.
+        El primer día, las actividades inician a las 8:30 con la acreditación, seguidas de la ceremonia de apertura y la foto grupal del campamento.
       </p>
       <p className="mt-4 text-sm">
-        El viernes 24 de julio las actividades finalizan a las 16:30.
+        El sábado 25 se realizará una choripanada en horario de almuerzo y un paseo en barco durante la tarde. Ambas actividades son cortesía de la organización y no tienen costo para los participantes.
       </p>
       <p className="mt-4 text-sm">
         El último día, viernes 31 de julio, las actividades finalizarán a las 13:30 después del almuerzo.
