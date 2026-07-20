@@ -15,13 +15,18 @@ interface Horario {
   s2: string;
 }
 
+interface MaterialFile {
+  name: string;
+  path: string;
+}
+
 interface Dia {
   dia: string;
   temas: string[];
   profesor: string | null;
   especial?: boolean;
   nota?: string;
-
+  material?: MaterialFile[];
 }
 
 interface Semana {
@@ -50,7 +55,7 @@ const horariosAvanzado: Horario[] = [
 
 const inicial: Semana = {
   dias: [
-    { dia: "Lunes 20",     temas: ["C++"],                                                 profesor: "Benjamín Letelier", nota: "Acreditación 8:30 → Ceremonia de apertura → Foto grupal → Clase" },
+    { dia: "Lunes 20",     temas: ["C++"],                                                 profesor: "Benjamín Letelier", nota: "Acreditación 8:30 → Ceremonia de apertura → Foto grupal → Clase", material: [{ name: "Clase 1", path: "/material/inicial/2026-07-20/Clase 1.pdf" }] },
     { dia: "Martes 21",    temas: ["Complejidad Algorítmica", "Pilas, colas, set y map"],  profesor: "Alex Blanchard" },
     { dia: "Miércoles 22", temas: ["Sorting y greedy", "Búsqueda binaria"],                profesor: "Blaz Korecic" },
     { dia: "Jueves 23",    temas: ["Programación Dinámica"],                               profesor: "Constanza Vásquez", nota: "Evento sponsor oro durante la tarde." },
@@ -67,7 +72,7 @@ const inicial: Semana = {
 
 const avanzado: Semana = {
   dias: [
-    { dia: "Lunes 20",     temas: ["Algoritmos randomizados"],                             profesor: "Sebastian Torrealba", nota: "Acreditación 8:30 → Ceremonia de apertura → Foto grupal → Clase" },
+    { dia: "Lunes 20",     temas: ["Algoritmos randomizados"],                             profesor: "Sebastian Torrealba", nota: "Acreditación 8:30 → Ceremonia de apertura → Foto grupal → Clase", material: [{ name: "Clase 1", path: "/material/avanzado/2026-07-20/Clase 1.pdf" }] },
     { dia: "Martes 21",    temas: ["EDD's persistentes"],                                  profesor: "Benjamin Letelier" },
     { dia: "Miércoles 22", temas: ["Hashing y Prefix Function", "Aho-Corasick"],           profesor: "Ignacio Muñoz" },
     { dia: "Jueves 23",    temas: ["Programación Dinámica Avanzada"],                      profesor: "Blaz Korecic", nota: "Evento sponsor oro durante la tarde." },
@@ -143,7 +148,23 @@ function TablaItinerario({ semana }: { semana: Semana }) {
               </TableCell>
               <TableCell className="text-right whitespace-nowrap">
                 {dia.especial ? "" : (
-                  <span className="text-muted-foreground">Próximamente</span>
+                  dia.material && dia.material.length > 0 ? (
+                    <div className="flex flex-col items-end gap-1">
+                      {dia.material.map((m, i) => (
+                        <a
+                          key={i}
+                          href={m.path}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm underline text-primary hover:text-primary/80"
+                        >
+                          {m.name}
+                        </a>
+                      ))}
+                    </div>
+                  ) : (
+                    <span className="text-muted-foreground">Próximamente</span>
+                  )
                 )}
               </TableCell>
             </TableRow>
