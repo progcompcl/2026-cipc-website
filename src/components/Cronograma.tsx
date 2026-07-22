@@ -73,7 +73,7 @@ const inicial: Semana = {
 const avanzado: Semana = {
   dias: [
     { dia: "Lunes 20",     temas: ["Algoritmos randomizados"],                             profesor: "Sebastian Torrealba", nota: "Acreditación 8:30 → Ceremonia de apertura → Foto grupal → Clase", material: [{ name: "Clase 1", path: "/material/avanzado/2026-07-20/Clase 1.pdf" }] },
-    { dia: "Martes 21",    temas: ["EDD's persistentes"],                                  profesor: "Benjamin Letelier", material: [{ name: "Clase 2", path: "/material/avanzado/2026-07-21/slides.pdf" }] },
+    { dia: "Martes 21",    temas: ["EDD's persistentes"],                                  profesor: "Benjamin Letelier", material: [{ name: "Clase 2", path: "/material/avanzado/2026-07-21/slides.pdf?v=2" }] },
     { dia: "Miércoles 22", temas: ["Prefix Function y Aho-Corasick"],                     profesor: "Ignacio Muñoz", material: [{ name: "Clase 3", path: "/material/avanzado/2026-07-22/slides.pdf" }] },
     { dia: "Jueves 23",    temas: ["Programación Dinámica Avanzada"],                      profesor: "Blaz Korecic", nota: "Evento sponsor oro durante la tarde." },
     { dia: "Viernes 24",   temas: ["Sqrt tricks y Algoritmos offline"],                    profesor: "Abner Vidal", nota: "Charla sponsor TopSort durante clases. Actividades hasta las 16:30." },
