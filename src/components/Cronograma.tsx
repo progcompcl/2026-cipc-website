@@ -76,7 +76,7 @@ const avanzado: Semana = {
     { dia: "Martes 21",    temas: ["EDD's persistentes"],                                  profesor: "Benjamin Letelier", material: [{ name: "Clase 2", path: "/material/avanzado/2026-07-21/slides.pdf?v=2" }] },
     { dia: "Miércoles 22", temas: ["Prefix Function y Aho-Corasick"],                     profesor: "Ignacio Muñoz", material: [{ name: "Clase 3", path: "/material/avanzado/2026-07-22/slides.pdf" }] },
     { dia: "Jueves 23",    temas: ["Programación Dinámica Avanzada"],                      profesor: "Blaz Korecic", nota: "Evento sponsor oro durante la tarde.", material: [{ name: "Slides", path: "/material/avanzado/2026-07-23/slides.pdf" }] },
-    { dia: "Viernes 24",   temas: ["Sqrt tricks y Algoritmos offline"],                    profesor: "Abner Vidal", nota: "Charla sponsor TopSort durante clases. Actividades hasta las 17:30." },
+    { dia: "Viernes 24",   temas: ["Sqrt tricks y Algoritmos offline"],                    profesor: "Abner Vidal", nota: "Charla sponsor TopSort durante clases. Actividades hasta las 17:30.", material: [{ name: "Slides", path: "/material/avanzado/2025-07-24/main.pdf" }]  },
     { dia: "Sábado 25",    temas: ["Choripanada", "Paseo en barco"],                        profesor: null, especial: true, nota: "Cortesía de la organización. Sin costo para los participantes." },
     { dia: "Domingo 26",   temas: ["Descanso"],                                            profesor: null, especial: true },
     { dia: "Lunes 27",     temas: ["Teoria de Juegos"],                                    profesor: "Marcelo Lemus" },
