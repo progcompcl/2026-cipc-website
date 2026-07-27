@@ -62,7 +62,7 @@ const inicial: Semana = {
     { dia: "Viernes 24",   temas: ["Resolución de Problemas"],                             profesor: "Ignacio Muñoz", nota: "Charla sponsor TopSort durante clases. Actividades hasta las 17:30.", material: [{ name: "Slides", path: "/material/inicial/2026-07-24/slides.pdf" }] },
     { dia: "Sábado 25",    temas: ["Choripanada", "Paseo en barco"],                        profesor: null, especial: true, nota: "Cortesía de la organización. Sin costo para los participantes." },
     { dia: "Domingo 26",   temas: ["Descanso"],                                            profesor: null, especial: true },
-    { dia: "Lunes 27",     temas: ["Brute force", "Matemáticas"],                          profesor: "Cristian Nettle" },
+    { dia: "Lunes 27",     temas: ["Brute force", "Matemáticas"],                          profesor: "Cristian Nettle", material: [{ name: "Slides", path: "/material/inicial/2025-07-27/slides.pdf" }]  },
     { dia: "Martes 28",    temas: ["Grafos I"],                                            profesor: "Nicolas Rojas" },
     { dia: "Miércoles 29", temas: ["Resolución de Problemas"],                             profesor: "Cristian Nettle", nota: "Charla sponsor Neuralworks en la tarde." },
     { dia: "Jueves 30",    temas: ["Grafos II"],                                           profesor: "Alex Blanchard" },
