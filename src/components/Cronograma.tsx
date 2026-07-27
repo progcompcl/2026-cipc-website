@@ -79,7 +79,7 @@ const avanzado: Semana = {
     { dia: "Viernes 24",   temas: ["Sqrt tricks y Algoritmos offline"],                    profesor: "Abner Vidal", nota: "Charla sponsor TopSort durante clases. Actividades hasta las 17:30.", material: [{ name: "Slides", path: "/material/avanzado/2025-07-24/main.pdf" }]  },
     { dia: "Sábado 25",    temas: ["Choripanada", "Paseo en barco"],                        profesor: null, especial: true, nota: "Cortesía de la organización. Sin costo para los participantes." },
     { dia: "Domingo 26",   temas: ["Descanso"],                                            profesor: null, especial: true },
-    { dia: "Lunes 27",     temas: ["Teoria de Juegos"],                                    profesor: "Marcelo Lemus" },
+    { dia: "Lunes 27",     temas: ["Teoria de Juegos"],                                    profesor: "Marcelo Lemus" material: [{ name: "Slides", path: "/material/avanzado/2025-07-27/slides.pdf" }]  },
     { dia: "Martes 28",    temas: ["Flujo"],                                               profesor: "Abner Vidal" },
     { dia: "Miércoles 29", temas: ["Resolución de Problemas"],                             profesor: "Marcelo Lemus", nota: "Charla sponsor Neuralworks en la tarde." },
     { dia: "Jueves 30",    temas: ["Geometría Computacional"],                             profesor: "Sebastian Torrealba" },
