@@ -63,7 +63,7 @@ const inicial: Semana = {
     { dia: "Sábado 25",    temas: ["Choripanada", "Paseo en barco"],                        profesor: null, especial: true, nota: "Cortesía de la organización. Sin costo para los participantes." },
     { dia: "Domingo 26",   temas: ["Descanso"],                                            profesor: null, especial: true },
     { dia: "Lunes 27",     temas: ["Brute force", "Matemáticas"],                          profesor: "Cristian Nettle", material: [{ name: "Slides", path: "/material/inicial/2025-07-27/slides.pdf" }]  },
-    { dia: "Martes 28",    temas: ["Grafos I"],                                            profesor: "Nicolas Rojas" },
+    { dia: "Martes 28",    temas: ["Grafos I"],                                            profesor: "Nicolas Rojas", material: [{ name: "Slides", path: "/material/inicial/2025-07-28/slides.pdf" }]  },
     { dia: "Miércoles 29", temas: ["Resolución de Problemas"],                             profesor: "Cristian Nettle", nota: "Charla sponsor Neuralworks en la tarde." },
     { dia: "Jueves 30",    temas: ["Grafos II"],                                           profesor: "Alex Blanchard" },
     { dia: "Viernes 31",   temas: ["Cierre"],                                              profesor: null, especial: true, nota: "Actividades hasta las 13:30" },
