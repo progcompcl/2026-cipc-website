@@ -65,7 +65,7 @@ const inicial: Semana = {
     { dia: "Lunes 27",     temas: ["Brute force", "Matemáticas"],                          profesor: "Cristian Nettle", material: [{ name: "Slides", path: "/material/inicial/2025-07-27/slides.pdf" }]  },
     { dia: "Martes 28",    temas: ["Grafos I"],                                            profesor: "Nicolas Rojas", material: [{ name: "Slides", path: "/material/inicial/2025-07-28/slides.pdf" }]  },
     { dia: "Miércoles 29", temas: ["Resolución de Problemas"],                             profesor: "Cristian Nettle", nota: "Charla sponsor Neuralworks en la tarde." },
-    { dia: "Jueves 30",    temas: ["Grafos II"],                                           profesor: "Alex Blanchard" },
+    { dia: "Jueves 30",    temas: ["Grafos II"],                                           profesor: "Alex Blanchard", material: [{ name: "Slides", path: "/material/inicial/2025-07-30/slides.pdf" }] },
     { dia: "Viernes 31",   temas: ["Cierre"],                                              profesor: null, especial: true, nota: "Actividades hasta las 13:30" },
   ],
 };
@@ -80,9 +80,9 @@ const avanzado: Semana = {
     { dia: "Sábado 25",    temas: ["Choripanada", "Paseo en barco"],                        profesor: null, especial: true, nota: "Cortesía de la organización. Sin costo para los participantes." },
     { dia: "Domingo 26",   temas: ["Descanso"],                                            profesor: null, especial: true },
     { dia: "Lunes 27",     temas: ["Teoria de Juegos"],                                    profesor: "Marcelo Lemus", material: [{ name: "Slides", path: "/material/avanzado/2025-07-27/slides.pdf" }]  },
-    { dia: "Martes 28",    temas: ["Flujo"],                                               profesor: "Abner Vidal" },
+    { dia: "Martes 28",    temas: ["Flujo"],                                               profesor: "Abner Vidal", material: [{ name: "Slides", path: "/material/avanzado/2025-07-28/slides.pdf" }]  },
     { dia: "Miércoles 29", temas: ["Resolución de Problemas"],                             profesor: "Marcelo Lemus", nota: "Charla sponsor Neuralworks en la tarde." },
-    { dia: "Jueves 30",    temas: ["Geometría Computacional"],                             profesor: "Sebastian Torrealba" },
+    { dia: "Jueves 30",    temas: ["Geometría Computacional"],                             profesor: "Sebastian Torrealba", material: [{ name: "Slides", path: "/material/avanzado/2025-07-30/slides.pdf" }]  },
     { dia: "Viernes 31",   temas: ["Cierre"],                                              profesor: null, especial: true, nota: "Actividades hasta las 13:30" },
   ],
 };
