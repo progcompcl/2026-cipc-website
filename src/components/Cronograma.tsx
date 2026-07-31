@@ -66,7 +66,7 @@ const inicial: Semana = {
     { dia: "Martes 28",    temas: ["Grafos I"],                                            profesor: "Nicolas Rojas", material: [{ name: "Slides", path: "/material/inicial/2025-07-28/slides.pdf" }]  },
     { dia: "Miércoles 29", temas: ["Resolución de Problemas"],                             profesor: "Cristian Nettle", nota: "Charla sponsor Neuralworks en la tarde." },
     { dia: "Jueves 30",    temas: ["Grafos II"],                                           profesor: "Alex Blanchard", material: [{ name: "Slides", path: "/material/inicial/2025-07-30/slides.pdf" }] },
-    { dia: "Viernes 31",   temas: ["Cierre"],                                              profesor: null, especial: true, nota: "Actividades hasta las 13:30" },
+    { dia: "Viernes 31",   temas: ["Cierre"],                                              profesor: null, especial: true, nota: "Actividades hasta las 13:30", material: [{ name: "Slides", path: "/material/inicial/2025-07-30/slides.pdf" }]  },
   ],
 };
 
@@ -83,7 +83,7 @@ const avanzado: Semana = {
     { dia: "Martes 28",    temas: ["Flujo"],                                               profesor: "Abner Vidal", material: [{ name: "Slides", path: "/material/avanzado/2025-07-28/slides.pdf" }]  },
     { dia: "Miércoles 29", temas: ["Resolución de Problemas"],                             profesor: "Marcelo Lemus", nota: "Charla sponsor Neuralworks en la tarde." },
     { dia: "Jueves 30",    temas: ["Geometría Computacional"],                             profesor: "Sebastian Torrealba", material: [{ name: "Slides", path: "/material/avanzado/2025-07-30/slides.pdf" }]  },
-    { dia: "Viernes 31",   temas: ["Cierre"],                                              profesor: null, especial: true, nota: "Actividades hasta las 13:30" },
+    { dia: "Viernes 31",   temas: ["Cierre"],                                              profesor: null, especial: true, nota: "Actividades hasta las 13:30", material: [{ name: "Slides", path: "/material/inicial/2025-07-30/slides.pdf" }]  },
   ],
 };
 
